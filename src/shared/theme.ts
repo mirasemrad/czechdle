@@ -18,6 +18,7 @@ export function setTheme(theme: Theme): void {
     /* ignore */
   }
   syncToggleLabels()
+  window.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }))
 }
 
 export function toggleTheme(): Theme {
