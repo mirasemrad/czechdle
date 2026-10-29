@@ -1,0 +1,1260 @@
+[
+  {
+    "id": "pyramida-giza",
+    "title": "Stavba Velké pyramidy v Gíze",
+    "year": -2560,
+    "category": "svet"
+  },
+  {
+    "id": "olympia-antique",
+    "title": "První antické olympijské hry",
+    "year": -776,
+    "category": "svet"
+  },
+  {
+    "id": "zalozeni-rimu",
+    "title": "Tradiční založení Říma",
+    "year": -753,
+    "category": "svet"
+  },
+  {
+    "id": "caesar-rubikon",
+    "title": "Caesar překračuje Rubikon",
+    "year": -49,
+    "category": "svet"
+  },
+  {
+    "id": "pompeje",
+    "title": "Výbuch Vesuvu — zánik Pompejí",
+    "year": 79,
+    "category": "svet"
+  },
+  {
+    "id": "pad-zapadu",
+    "title": "Zánik Západořímské říše",
+    "year": 476,
+    "category": "svet"
+  },
+  {
+    "id": "cyril-metodej",
+    "title": "Cyril a Metoděj přicházejí na Velkou Moravu",
+    "year": 863,
+    "category": "politika"
+  },
+  {
+    "id": "svaty-vaclav",
+    "title": "Vražda svatého Václava",
+    "year": 935,
+    "category": "politika"
+  },
+  {
+    "id": "hastings",
+    "title": "Bitva u Hastings",
+    "year": 1066,
+    "category": "svet"
+  },
+  {
+    "id": "zlata-bula-sicilska",
+    "title": "Zlatá bula sicilská",
+    "year": 1212,
+    "category": "politika"
+  },
+  {
+    "id": "magna-charta",
+    "title": "Magna charta libertatum",
+    "year": 1215,
+    "category": "svet"
+  },
+  {
+    "id": "moravske-pole",
+    "title": "Bitva na Moravském poli",
+    "year": 1278,
+    "month": 8,
+    "day": 26,
+    "category": "politika"
+  },
+  {
+    "id": "vymreni-premyslovcu",
+    "title": "Vymření Přemyslovců po meči",
+    "year": 1306,
+    "category": "politika"
+  },
+  {
+    "id": "karlova-univerzita",
+    "title": "Založení Univerzity Karlovy",
+    "year": 1348,
+    "category": "kultura"
+  },
+  {
+    "id": "karlstejn",
+    "title": "Začátek stavby hradu Karlštejn",
+    "year": 1348,
+    "category": "kultura"
+  },
+  {
+    "id": "cerna-smrt",
+    "title": "Černá smrt vrcholí v Evropě",
+    "year": 1348,
+    "category": "svet"
+  },
+  {
+    "id": "karel-iv-cisar",
+    "title": "Karel IV. císařem Svaté říše římské",
+    "year": 1355,
+    "category": "politika"
+  },
+  {
+    "id": "karluv-most",
+    "title": "Začátek stavby Karlova mostu",
+    "year": 1357,
+    "month": 7,
+    "day": 9,
+    "category": "kultura"
+  },
+  {
+    "id": "orloj",
+    "title": "První zmínka o pražském orloji",
+    "year": 1410,
+    "category": "kultura"
+  },
+  {
+    "id": "jan-hus",
+    "title": "Upálení Jana Husa",
+    "year": 1415,
+    "month": 7,
+    "day": 6,
+    "category": "politika"
+  },
+  {
+    "id": "defenestrace-1419",
+    "title": "První pražská defenestrace",
+    "year": 1419,
+    "category": "politika"
+  },
+  {
+    "id": "vitkov",
+    "title": "Bitva na Vítkově",
+    "year": 1420,
+    "month": 7,
+    "day": 14,
+    "category": "politika"
+  },
+  {
+    "id": "lipany",
+    "title": "Bitva u Lipan",
+    "year": 1434,
+    "month": 5,
+    "day": 30,
+    "category": "politika"
+  },
+  {
+    "id": "konstantinopol",
+    "title": "Pád Konstantinopole",
+    "year": 1453,
+    "category": "svet"
+  },
+  {
+    "id": "guttenberg",
+    "title": "Gutenbergův knihtisk",
+    "year": 1455,
+    "category": "svet"
+  },
+  {
+    "id": "jiri-podebrad",
+    "title": "Jiří z Poděbrad zvolen králem",
+    "year": 1458,
+    "category": "politika"
+  },
+  {
+    "id": "kolumbus",
+    "title": "Kolumbus doplouvá do Ameriky",
+    "year": 1492,
+    "category": "svet"
+  },
+  {
+    "id": "luther",
+    "title": "Lutherovy teze ve Wittenbergu",
+    "year": 1517,
+    "month": 10,
+    "day": 31,
+    "category": "svet"
+  },
+  {
+    "id": "mohac",
+    "title": "Bitva u Moháče",
+    "year": 1526,
+    "month": 8,
+    "day": 29,
+    "category": "svet"
+  },
+  {
+    "id": "habsburkove-1526",
+    "title": "Ferdinand I. českým králem",
+    "year": 1526,
+    "month": 12,
+    "day": 17,
+    "category": "politika"
+  },
+  {
+    "id": "defenestrace-1618",
+    "title": "Druhá pražská defenestrace",
+    "year": 1618,
+    "month": 5,
+    "day": 23,
+    "category": "politika"
+  },
+  {
+    "id": "bila-hora",
+    "title": "Bitva na Bílé hoře",
+    "year": 1620,
+    "month": 11,
+    "day": 8,
+    "category": "politika"
+  },
+  {
+    "id": "staromestske-popravy",
+    "title": "Staroměstská poprava 27 českých pánů",
+    "year": 1621,
+    "month": 6,
+    "day": 21,
+    "category": "politika"
+  },
+  {
+    "id": "vestfalsky-mir",
+    "title": "Vestfálský mír (konec třicetileté války)",
+    "year": 1648,
+    "category": "svet"
+  },
+  {
+    "id": "newton-principia",
+    "title": "Newton vydává Principia",
+    "year": 1687,
+    "category": "svet"
+  },
+  {
+    "id": "usa-nezavislost",
+    "title": "Deklarace nezávislosti USA",
+    "year": 1776,
+    "month": 7,
+    "day": 4,
+    "category": "svet"
+  },
+  {
+    "id": "josef-ii-nevolnictvi",
+    "title": "Josef II. zrušuje nevolnictví",
+    "year": 1781,
+    "category": "politika"
+  },
+  {
+    "id": "francouzska-revoluce",
+    "title": "Dobytí Bastily",
+    "year": 1789,
+    "month": 7,
+    "day": 14,
+    "category": "svet"
+  },
+  {
+    "id": "becherovka",
+    "title": "Začátek výroby Becherovky",
+    "year": 1807,
+    "category": "zabava"
+  },
+  {
+    "id": "waterloo",
+    "title": "Bitva u Waterloo",
+    "year": 1815,
+    "month": 6,
+    "day": 18,
+    "category": "svet"
+  },
+  {
+    "id": "narodni-muzeum",
+    "title": "Založení Národního muzea",
+    "year": 1818,
+    "category": "kultura"
+  },
+  {
+    "id": "prazdroj",
+    "title": "První várka plzeňského Prazdroje",
+    "year": 1842,
+    "month": 10,
+    "day": 5,
+    "category": "zabava"
+  },
+  {
+    "id": "revoluce-1848",
+    "title": "Revoluce 1848 v Praze",
+    "year": 1848,
+    "category": "politika"
+  },
+  {
+    "id": "darwin",
+    "title": "Darwin vydává O původu druhů",
+    "year": 1859,
+    "category": "svet"
+  },
+  {
+    "id": "sokol",
+    "title": "Založení Sokola",
+    "year": 1862,
+    "category": "sport"
+  },
+  {
+    "id": "smetana-prodana",
+    "title": "Premiéra Prodané nevěsty",
+    "year": 1866,
+    "month": 5,
+    "day": 30,
+    "category": "kultura"
+  },
+  {
+    "id": "rakousko-uhersko",
+    "title": "Rakousko-uherské vyrovnání",
+    "year": 1867,
+    "category": "politika"
+  },
+  {
+    "id": "suez",
+    "title": "Otevření Suezského průplavu",
+    "year": 1869,
+    "category": "svet"
+  },
+  {
+    "id": "gambrinus",
+    "title": "Založení pivovaru Gambrinus",
+    "year": 1869,
+    "category": "zabava"
+  },
+  {
+    "id": "staropramen",
+    "title": "Založení pivovaru Staropramen",
+    "year": 1869,
+    "category": "zabava"
+  },
+  {
+    "id": "velka-pardubicka",
+    "title": "První ročník Velké pardubické",
+    "year": 1874,
+    "category": "sport"
+  },
+  {
+    "id": "vltava-smetana",
+    "title": "Smetana dokončuje symfonickou báseň Vltava",
+    "year": 1874,
+    "category": "kultura"
+  },
+  {
+    "id": "telefon-bell",
+    "title": "Bell patentuje telefon",
+    "year": 1876,
+    "category": "svet"
+  },
+  {
+    "id": "edison-zarovka",
+    "title": "Edison předvádí žárovku",
+    "year": 1879,
+    "category": "svet"
+  },
+  {
+    "id": "narodni-divadlo",
+    "title": "Otevření Národního divadla",
+    "year": 1881,
+    "category": "kultura"
+  },
+  {
+    "id": "sokoli-slet",
+    "title": "První všesokolský slet",
+    "year": 1882,
+    "category": "sport"
+  },
+  {
+    "id": "narodni-divadlo-znovu",
+    "title": "Znovuotevření Národního divadla po požáru",
+    "year": 1883,
+    "category": "kultura"
+  },
+  {
+    "id": "eiffelovka",
+    "title": "Otevření Eiffelovy věže",
+    "year": 1889,
+    "category": "svet"
+  },
+  {
+    "id": "petrin",
+    "title": "Otevření Petřínské rozhledny",
+    "year": 1891,
+    "category": "kultura"
+  },
+  {
+    "id": "tramvaj-praha",
+    "title": "První elektrická tramvaj v Praze",
+    "year": 1891,
+    "category": "zabava"
+  },
+  {
+    "id": "slavia",
+    "title": "Založení SK Slavie Praha",
+    "year": 1892,
+    "category": "sport"
+  },
+  {
+    "id": "dvorak-nova-svet",
+    "title": "Premiéra Dvořákovy Novosvětské",
+    "year": 1893,
+    "category": "kultura"
+  },
+  {
+    "id": "fotbal-sparta",
+    "title": "Založení AC Sparty Praha",
+    "year": 1893,
+    "category": "sport"
+  },
+  {
+    "id": "bata",
+    "title": "Založení firmy Baťa",
+    "year": 1894,
+    "category": "zabava"
+  },
+  {
+    "id": "roentgen",
+    "title": "Röntgen objevuje paprsky X",
+    "year": 1895,
+    "category": "svet"
+  },
+  {
+    "id": "budvar",
+    "title": "Založení Budějovického Budvaru",
+    "year": 1895,
+    "category": "zabava"
+  },
+  {
+    "id": "laurin-klement",
+    "title": "Založení Laurin & Klement (dnešní Škoda Auto)",
+    "year": 1895,
+    "category": "zabava"
+  },
+  {
+    "id": "olympiada-1896",
+    "title": "První novodobé olympijské hry",
+    "year": 1896,
+    "category": "svet"
+  },
+  {
+    "id": "filharmonie",
+    "title": "Založení České filharmonie",
+    "year": 1896,
+    "category": "kultura"
+  },
+  {
+    "id": "wrightove",
+    "title": "Bratři Wrightové poprvé letí",
+    "year": 1903,
+    "month": 12,
+    "day": 17,
+    "category": "svet"
+  },
+  {
+    "id": "janacek-jenufa",
+    "title": "Premiéra Janáčkovy Její pastorkyně",
+    "year": 1904,
+    "category": "kultura"
+  },
+  {
+    "id": "einstein-1905",
+    "title": "Einsteinův zázračný rok (E=mc²)",
+    "year": 1905,
+    "category": "svet"
+  },
+  {
+    "id": "mucha-slovanska",
+    "title": "Alfons Mucha začíná Slovanskou epopej",
+    "year": 1910,
+    "category": "kultura"
+  },
+  {
+    "id": "titanic",
+    "title": "Potopení Titaniku",
+    "year": 1912,
+    "month": 4,
+    "day": 15,
+    "category": "svet"
+  },
+  {
+    "id": "ww1",
+    "title": "Začátek první světové války",
+    "year": 1914,
+    "month": 7,
+    "day": 28,
+    "category": "svet"
+  },
+  {
+    "id": "zborov",
+    "title": "Bitva u Zborova",
+    "year": 1917,
+    "month": 7,
+    "day": 2,
+    "category": "politika"
+  },
+  {
+    "id": "csr",
+    "title": "Vznik Československa",
+    "year": 1918,
+    "month": 10,
+    "day": 28,
+    "category": "politika"
+  },
+  {
+    "id": "svejk",
+    "title": "Hašek začíná vydávat Osudy dobrého vojáka Švejka",
+    "year": 1921,
+    "category": "kultura"
+  },
+  {
+    "id": "rur",
+    "title": "Premiéra Čapkova R.U.R. (slovo „robot“)",
+    "year": 1921,
+    "category": "kultura"
+  },
+  {
+    "id": "tutanchamon",
+    "title": "Objev Tutanchamonovy hrobky",
+    "year": 1922,
+    "category": "svet"
+  },
+  {
+    "id": "jawa",
+    "title": "Založení značky Jawa",
+    "year": 1929,
+    "category": "zabava"
+  },
+  {
+    "id": "cerny-patek",
+    "title": "Černý pátek na Wall Street",
+    "year": 1929,
+    "month": 10,
+    "day": 25,
+    "category": "svet"
+  },
+  {
+    "id": "tomas-bata-smrt",
+    "title": "Smrt Tomáše Bati",
+    "year": 1932,
+    "category": "zabava"
+  },
+  {
+    "id": "masaryk-smrt",
+    "title": "Úmrtí T. G. Masaryka",
+    "year": 1937,
+    "category": "politika"
+  },
+  {
+    "id": "mnichov",
+    "title": "Mnichovská dohoda",
+    "year": 1938,
+    "month": 9,
+    "day": 30,
+    "category": "politika"
+  },
+  {
+    "id": "protektorat",
+    "title": "Vznik Protektorátu Čechy a Morava",
+    "year": 1939,
+    "month": 3,
+    "day": 16,
+    "category": "politika"
+  },
+  {
+    "id": "ww2-start",
+    "title": "Začátek druhé světové války",
+    "year": 1939,
+    "month": 9,
+    "day": 1,
+    "category": "svet"
+  },
+  {
+    "id": "pearl-harbor",
+    "title": "Útok na Pearl Harbor",
+    "year": 1941,
+    "month": 12,
+    "day": 7,
+    "category": "svet"
+  },
+  {
+    "id": "heydrich",
+    "title": "Atentát na Reinharda Heydricha",
+    "year": 1942,
+    "month": 5,
+    "day": 27,
+    "category": "politika"
+  },
+  {
+    "id": "lidice",
+    "title": "Vyhlazení Lidic",
+    "year": 1942,
+    "month": 6,
+    "day": 10,
+    "category": "politika"
+  },
+  {
+    "id": "dday",
+    "title": "Den D — vylodění v Normandii",
+    "year": 1944,
+    "month": 6,
+    "day": 6,
+    "category": "svet"
+  },
+  {
+    "id": "osvobozeni-prahy",
+    "title": "Osvobození Prahy",
+    "year": 1945,
+    "month": 5,
+    "day": 9,
+    "category": "politika"
+  },
+  {
+    "id": "hiroshima",
+    "title": "Atomový útok na Hirošimu",
+    "year": 1945,
+    "month": 8,
+    "day": 6,
+    "category": "svet"
+  },
+  {
+    "id": "osn",
+    "title": "Založení OSN",
+    "year": 1945,
+    "month": 10,
+    "day": 24,
+    "category": "svet"
+  },
+  {
+    "id": "unor-1948",
+    "title": "Únorový komunistický převrat",
+    "year": 1948,
+    "month": 2,
+    "day": 25,
+    "category": "politika"
+  },
+  {
+    "id": "horakova",
+    "title": "Poprava Milady Horákové",
+    "year": 1950,
+    "month": 6,
+    "day": 27,
+    "category": "politika"
+  },
+  {
+    "id": "dana-zatopekova",
+    "title": "Dana Zátopková bere olympijské zlato",
+    "year": 1952,
+    "category": "sport"
+  },
+  {
+    "id": "zatopek-helsinky",
+    "title": "Emil Zátopek bere tři zlata v Helsinkách",
+    "year": 1952,
+    "category": "sport"
+  },
+  {
+    "id": "horalky",
+    "title": "Uvedení Horalek",
+    "year": 1953,
+    "category": "zabava"
+  },
+  {
+    "id": "prvni-tv",
+    "title": "Zahájení televizního vysílání v Československu",
+    "year": 1953,
+    "month": 5,
+    "day": 1,
+    "category": "zabava"
+  },
+  {
+    "id": "krtek",
+    "title": "První film s Krtkem",
+    "year": 1957,
+    "category": "zabava"
+  },
+  {
+    "id": "sputnik",
+    "title": "Start Sputniku 1",
+    "year": 1957,
+    "month": 10,
+    "day": 4,
+    "category": "svet"
+  },
+  {
+    "id": "laterna-magika",
+    "title": "Premiéra Laterny magiky na EXPO 58",
+    "year": 1958,
+    "category": "kultura"
+  },
+  {
+    "id": "semafor",
+    "title": "Otevření divadla Semafor",
+    "year": 1959,
+    "category": "kultura"
+  },
+  {
+    "id": "tatranky",
+    "title": "Uvedení Tatranek",
+    "year": 1959,
+    "category": "zabava"
+  },
+  {
+    "id": "kofola",
+    "title": "Uvedení Kofoly na trh",
+    "year": 1960,
+    "category": "zabava"
+  },
+  {
+    "id": "gagarin",
+    "title": "Jurij Gagarin ve vesmíru",
+    "year": 1961,
+    "month": 4,
+    "day": 12,
+    "category": "svet"
+  },
+  {
+    "id": "berlin-wall",
+    "title": "Stavba Berlínské zdi",
+    "year": 1961,
+    "month": 8,
+    "day": 13,
+    "category": "svet"
+  },
+  {
+    "id": "fidorka",
+    "title": "Uvedení Fidorky",
+    "year": 1965,
+    "category": "zabava"
+  },
+  {
+    "id": "vecernicek",
+    "title": "Zahájení Večerníčku",
+    "year": 1965,
+    "month": 1,
+    "day": 2,
+    "category": "zabava"
+  },
+  {
+    "id": "ostre-sledovane",
+    "title": "Premiéra filmu Ostře sledované vlaky",
+    "year": 1966,
+    "category": "kultura"
+  },
+  {
+    "id": "cimrman",
+    "title": "Založení Divadla Járy Cimrmana",
+    "year": 1966,
+    "category": "zabava"
+  },
+  {
+    "id": "caslavska",
+    "title": "Věra Čáslavská bere zlata na OH v Mexiku",
+    "year": 1968,
+    "category": "sport"
+  },
+  {
+    "id": "prazske-jaro",
+    "title": "Začátek pražského jara",
+    "year": 1968,
+    "month": 1,
+    "day": 5,
+    "category": "politika"
+  },
+  {
+    "id": "oscar-vlaky",
+    "title": "Ostře sledované vlaky získávají Oscara",
+    "year": 1968,
+    "month": 4,
+    "day": 10,
+    "category": "kultura"
+  },
+  {
+    "id": "okupace-1968",
+    "title": "Okupace Československa vojsky Varšavské smlouvy",
+    "year": 1968,
+    "month": 8,
+    "day": 21,
+    "category": "politika"
+  },
+  {
+    "id": "palach",
+    "title": "Upálení Jana Palacha",
+    "year": 1969,
+    "month": 1,
+    "day": 16,
+    "category": "politika"
+  },
+  {
+    "id": "moon-landing",
+    "title": "Přistání člověka na Měsíci",
+    "year": 1969,
+    "month": 7,
+    "day": 20,
+    "category": "svet"
+  },
+  {
+    "id": "metro-praha",
+    "title": "Zahájení provozu pražského metra",
+    "year": 1974,
+    "month": 5,
+    "day": 9,
+    "category": "zabava"
+  },
+  {
+    "id": "forman-prelet",
+    "title": "Formanův Přelet nad kukaččím hnízdem bere Oscara",
+    "year": 1976,
+    "category": "kultura"
+  },
+  {
+    "id": "charta-77",
+    "title": "Zveřejnění Charty 77",
+    "year": 1977,
+    "category": "politika"
+  },
+  {
+    "id": "star-wars",
+    "title": "Premiéra Star Wars",
+    "year": 1977,
+    "month": 5,
+    "day": 25,
+    "category": "svet"
+  },
+  {
+    "id": "arabela",
+    "title": "Premiéra pohádky Arabela",
+    "year": 1980,
+    "category": "zabava"
+  },
+  {
+    "id": "seifert-nobel",
+    "title": "Jaroslav Seifert získává Nobelovu cenu",
+    "year": 1984,
+    "category": "kultura"
+  },
+  {
+    "id": "forman-amadeus",
+    "title": "Formanův Amadeus bere Oscara",
+    "year": 1985,
+    "category": "kultura"
+  },
+  {
+    "id": "cernobyl",
+    "title": "Černobylská havárie",
+    "year": 1986,
+    "month": 4,
+    "day": 26,
+    "category": "svet"
+  },
+  {
+    "id": "skoda-favorit",
+    "title": "Představení Škody Favorit",
+    "year": 1987,
+    "category": "zabava"
+  },
+  {
+    "id": "www",
+    "title": "Tim Berners-Lee navrhuje World Wide Web",
+    "year": 1989,
+    "month": 3,
+    "day": 12,
+    "category": "svet"
+  },
+  {
+    "id": "pad-berlinu",
+    "title": "Pád Berlínské zdi",
+    "year": 1989,
+    "month": 11,
+    "day": 9,
+    "category": "svet"
+  },
+  {
+    "id": "sametova",
+    "title": "Začátek sametové revoluce",
+    "year": 1989,
+    "month": 11,
+    "day": 17,
+    "category": "politika"
+  },
+  {
+    "id": "havel-prezident",
+    "title": "Václav Havel zvolen prezidentem",
+    "year": 1989,
+    "month": 12,
+    "day": 29,
+    "category": "politika"
+  },
+  {
+    "id": "jagr-nhl-debut",
+    "title": "Jaromír Jágr debutuje v NHL",
+    "year": 1990,
+    "category": "sport"
+  },
+  {
+    "id": "zizkovska-vez",
+    "title": "Dokončení Žižkovské věže",
+    "year": 1992,
+    "category": "kultura"
+  },
+  {
+    "id": "mcdonalds-praha",
+    "title": "První McDonald’s v Československu",
+    "year": 1992,
+    "category": "zabava"
+  },
+  {
+    "id": "rozdeleni-csfr",
+    "title": "Vznik samostatné České republiky",
+    "year": 1993,
+    "month": 1,
+    "day": 1,
+    "category": "politika"
+  },
+  {
+    "id": "koruna",
+    "title": "Zavedení české koruny",
+    "year": 1993,
+    "month": 2,
+    "day": 8,
+    "category": "politika"
+  },
+  {
+    "id": "nova-tv",
+    "title": "Start televize Nova",
+    "year": 1994,
+    "month": 2,
+    "day": 4,
+    "category": "zabava"
+  },
+  {
+    "id": "kutna-hora-unesco",
+    "title": "Historické centrum Kutné Hory na UNESCO",
+    "year": 1995,
+    "category": "kultura"
+  },
+  {
+    "id": "tancici-dum",
+    "title": "Dokončení Tančícího domu",
+    "year": 1996,
+    "category": "kultura"
+  },
+  {
+    "id": "lednice-unesco",
+    "title": "Lednicko-valtický areál na UNESCO",
+    "year": 1996,
+    "category": "kultura"
+  },
+  {
+    "id": "ikea-cr",
+    "title": "První IKEA v Česku",
+    "year": 1996,
+    "category": "zabava"
+  },
+  {
+    "id": "skoda-octavia",
+    "title": "Představení moderní Škody Octavia",
+    "year": 1996,
+    "category": "zabava"
+  },
+  {
+    "id": "seznam-cz",
+    "title": "Spouštění Seznam.cz",
+    "year": 1996,
+    "category": "zabava"
+  },
+  {
+    "id": "euro-96",
+    "title": "Česko bere stříbro na Euru 96",
+    "year": 1996,
+    "category": "sport"
+  },
+  {
+    "id": "kolja",
+    "title": "Film Kolja získává Oscara",
+    "year": 1997,
+    "category": "kultura"
+  },
+  {
+    "id": "harry-potter",
+    "title": "Vydání prvního Harryho Pottera",
+    "year": 1997,
+    "month": 6,
+    "day": 26,
+    "category": "svet"
+  },
+  {
+    "id": "nagano",
+    "title": "Zlatý hokej v Naganu",
+    "year": 1998,
+    "month": 2,
+    "day": 22,
+    "category": "sport"
+  },
+  {
+    "id": "google",
+    "title": "Založení Googlu",
+    "year": 1998,
+    "month": 9,
+    "day": 4,
+    "category": "svet"
+  },
+  {
+    "id": "pelisky",
+    "title": "Premiéra filmu Pelíšky",
+    "year": 1999,
+    "category": "zabava"
+  },
+  {
+    "id": "nato",
+    "title": "Vstup Česka do NATO",
+    "year": 1999,
+    "month": 3,
+    "day": 12,
+    "category": "politika"
+  },
+  {
+    "id": "temelin",
+    "title": "Spuštění JE Temelín",
+    "year": 2000,
+    "category": "politika"
+  },
+  {
+    "id": "wikipedia",
+    "title": "Založení Wikipedie",
+    "year": 2001,
+    "month": 1,
+    "day": 15,
+    "category": "svet"
+  },
+  {
+    "id": "911",
+    "title": "Útoky z 11. září",
+    "year": 2001,
+    "month": 9,
+    "day": 11,
+    "category": "svet"
+  },
+  {
+    "id": "euro-hotovost",
+    "title": "Zavedení hotovostního eura",
+    "year": 2002,
+    "month": 1,
+    "day": 1,
+    "category": "svet"
+  },
+  {
+    "id": "povoden-2002",
+    "title": "Velká povodeň v Česku",
+    "year": 2002,
+    "month": 8,
+    "day": 13,
+    "category": "politika"
+  },
+  {
+    "id": "nedved-zlaty-mic",
+    "title": "Pavel Nedvěd získává Zlatý míč",
+    "year": 2003,
+    "category": "sport"
+  },
+  {
+    "id": "facebook",
+    "title": "Založení Facebooku",
+    "year": 2004,
+    "month": 2,
+    "day": 4,
+    "category": "svet"
+  },
+  {
+    "id": "eu",
+    "title": "Vstup Česka do Evropské unie",
+    "year": 2004,
+    "month": 5,
+    "day": 1,
+    "category": "politika"
+  },
+  {
+    "id": "ms-hokej-2005",
+    "title": "Česko mistrem světa v hokeji (Vídeň)",
+    "year": 2005,
+    "category": "sport"
+  },
+  {
+    "id": "youtube",
+    "title": "Založení YouTube",
+    "year": 2005,
+    "month": 2,
+    "day": 14,
+    "category": "svet"
+  },
+  {
+    "id": "iphone",
+    "title": "Představení prvního iPhonu",
+    "year": 2007,
+    "month": 1,
+    "day": 9,
+    "category": "svet"
+  },
+  {
+    "id": "schengen",
+    "title": "Česko vstupuje do Schengenu",
+    "year": 2007,
+    "month": 12,
+    "day": 21,
+    "category": "politika"
+  },
+  {
+    "id": "spotakova-peking",
+    "title": "Barbora Špotáková bere olympijské zlato",
+    "year": 2008,
+    "category": "sport"
+  },
+  {
+    "id": "sablikova",
+    "title": "Martina Sáblíková bere olympijské zlato",
+    "year": 2010,
+    "category": "sport"
+  },
+  {
+    "id": "ms-hokej-2010",
+    "title": "Česko mistrem světa v hokeji (Německo)",
+    "year": 2010,
+    "category": "sport"
+  },
+  {
+    "id": "kvitova-wimbledon",
+    "title": "Petra Kvitová vyhrává Wimbledon",
+    "year": 2011,
+    "category": "sport"
+  },
+  {
+    "id": "plzen-liga",
+    "title": "Viktoria Plzeň poprvé mistrem ligy",
+    "year": 2011,
+    "category": "sport"
+  },
+  {
+    "id": "havel-umrti",
+    "title": "Úmrtí Václava Havla",
+    "year": 2011,
+    "month": 12,
+    "day": 18,
+    "category": "politika"
+  },
+  {
+    "id": "davis-cup-2012",
+    "title": "Česko vyhrává Davis Cup",
+    "year": 2012,
+    "category": "sport"
+  },
+  {
+    "id": "primo-volba",
+    "title": "První přímá volba prezidenta ČR",
+    "year": 2013,
+    "category": "politika"
+  },
+  {
+    "id": "rohlik",
+    "title": "Start Rohlik.cz",
+    "year": 2014,
+    "category": "zabava"
+  },
+  {
+    "id": "krpalek-rio",
+    "title": "Lukáš Krpálek bere olympijské zlato v Riu",
+    "year": 2016,
+    "category": "sport"
+  },
+  {
+    "id": "netflix-cr",
+    "title": "Netflix dostupný v Česku",
+    "year": 2016,
+    "category": "zabava"
+  },
+  {
+    "id": "eet",
+    "title": "Spuštění EET",
+    "year": 2016,
+    "month": 12,
+    "day": 1,
+    "category": "politika"
+  },
+  {
+    "id": "ledecka",
+    "title": "Ester Ledecká bere dvě zlata v Pchjongčchangu",
+    "year": 2018,
+    "category": "sport"
+  },
+  {
+    "id": "gott-umrti",
+    "title": "Úmrtí Karla Gotta",
+    "year": 2019,
+    "month": 10,
+    "day": 1,
+    "category": "zabava"
+  },
+  {
+    "id": "covid",
+    "title": "WHO vyhlašuje pandemii covidu-19",
+    "year": 2020,
+    "month": 3,
+    "day": 11,
+    "category": "svet"
+  },
+  {
+    "id": "rousky",
+    "title": "Povinné roušky v Česku",
+    "year": 2020,
+    "month": 3,
+    "day": 19,
+    "category": "politika"
+  },
+  {
+    "id": "krpalek-tokyo",
+    "title": "Lukáš Krpálek bere druhé olympijské zlato",
+    "year": 2021,
+    "category": "sport"
+  },
+  {
+    "id": "tornado-morava",
+    "title": "Tornádo na jižní Moravě",
+    "year": 2021,
+    "month": 6,
+    "day": 24,
+    "category": "politika"
+  },
+  {
+    "id": "rusko-ukrajina",
+    "title": "Ruská invaze na Ukrajinu",
+    "year": 2022,
+    "month": 2,
+    "day": 24,
+    "category": "svet"
+  },
+  {
+    "id": "chatgpt",
+    "title": "Spuštění ChatGPT",
+    "year": 2022,
+    "month": 11,
+    "day": 30,
+    "category": "svet"
+  },
+  {
+    "id": "pavel-prezident",
+    "title": "Petr Pavel zvolen prezidentem",
+    "year": 2023,
+    "month": 1,
+    "day": 28,
+    "category": "politika"
+  },
+  {
+    "id": "ms-hokej-2024",
+    "title": "Česko mistrem světa v hokeji (Praha a Ostrava)",
+    "year": 2024,
+    "month": 5,
+    "day": 26,
+    "category": "sport"
+  }
+]

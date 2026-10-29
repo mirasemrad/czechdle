@@ -33,6 +33,7 @@ html[data-theme='dark'] {
   --danger: #e07a6a;
   --tile-a: #0f766e;
   --tile-b: #1e4f8c;
+  --tile-c: #9a5b1f;
   --mark: #e8b84a;
   --font-display: "Bricolage Grotesque", "Outfit", sans-serif;
   --font-body: "Outfit", "Segoe UI", sans-serif;
@@ -81,6 +82,7 @@ html[data-theme='light'] {
   --danger: #c45b4e;
   --tile-a: #0f766e;
   --tile-b: #1e4f8c;
+  --tile-c: #a16207;
   --mark: #e8b84a;
 }
 
@@ -256,6 +258,10 @@ button {
   background: var(--tile-b);
 }
 
+.game-tile-timeline {
+  background: var(--tile-c);
+}
+
 .game-tile-meta {
   display: flex;
   justify-content: space-between;
@@ -306,6 +312,10 @@ button {
 
 .game-tile-smery .game-tile-cta {
   color: var(--tile-b);
+}
+
+.game-tile-timeline .game-tile-cta {
+  color: var(--tile-c);
 }
 
 .game-tile:hover .game-tile-cta {
@@ -495,6 +505,10 @@ button {
   background: var(--tile-b);
 }
 
+.mode-card-amber {
+  background: var(--tile-c);
+}
+
 .mode-play {
   margin-top: auto;
   display: inline-flex;
@@ -515,6 +529,10 @@ button {
 
 .mode-card-sky .mode-play {
   color: var(--tile-b);
+}
+
+.mode-card-amber .mode-play {
+  color: var(--tile-c);
 }
 
 .mode-card:hover .mode-play {
@@ -1361,4 +1379,69 @@ body.smery-dragging .city-card {
 
 .smery-tooltip::before {
   border-top-color: var(--tooltip-border) !important;
+}
+
+/* —— Timeline —— */
+.timeline-shell .hud {
+  margin-bottom: 0.75rem;
+}
+
+.timeline-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  flex: 1;
+  min-height: 0;
+}
+
+.timeline-axis {
+  flex: 1;
+  min-height: 10rem;
+}
+
+.timeline-track {
+  min-height: 8.5rem;
+  align-items: stretch;
+  padding: 0.85rem 0.55rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.timeline-card {
+  max-width: 14rem;
+  text-align: left;
+  white-space: normal;
+  line-height: 1.25;
+  font-size: 0.88rem;
+}
+
+.timeline-placed {
+  min-width: 8.5rem;
+  max-width: 11rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 0.7rem 0.8rem;
+}
+
+.timeline-fixed {
+  outline: 1px solid var(--line-strong);
+  background: var(--anchor-face);
+}
+
+.timeline-placed .placed-card-name {
+  white-space: normal;
+  line-height: 1.25;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 720px) {
+  .timeline-track {
+    min-height: 9.5rem;
+  }
+
+  .timeline-placed {
+    min-width: 7.5rem;
+    max-width: 9.5rem;
+  }
 }

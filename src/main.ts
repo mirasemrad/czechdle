@@ -10,7 +10,7 @@ const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
   <main class="hub">
-    <p class="hub-kicker">Denní hádanky · mapa Česka</p>
+    <p class="hub-kicker">Denní hádanky · Česko i svět</p>
     <h1 class="hub-brand">Czechdle</h1>
     <p class="hub-lead">
       Jedna výzva denně — nebo <em>procvičování</em> bez limitu.
@@ -35,6 +35,17 @@ app.innerHTML = `
           </span>
           <h2>Seřaď města.</h2>
           <p>Přetahuj kartičky západ–východ nebo sever–jih.</p>
+          <span class="game-tile-cta">Hrát →</span>
+        </a>
+      </li>
+      <li>
+        <a class="game-tile game-tile-timeline" href="/timeline/">
+          <span class="game-tile-meta">
+            <span>Timeline</span>
+            <span>historie</span>
+          </span>
+          <h2>Doplň časovou osu.</h2>
+          <p>5 daných událostí — přidej mezi ně svých 5 karet.</p>
           <span class="game-tile-cta">Hrát →</span>
         </a>
       </li>

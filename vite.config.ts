@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(rootDir, 'index.html'),
         mesta: resolve(rootDir, 'mesta/index.html'),
         smery: resolve(rootDir, 'smery/index.html'),
+        timeline: resolve(rootDir, 'timeline/index.html'),
       },
     },
   },
