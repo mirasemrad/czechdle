@@ -6,30 +6,57 @@ import {
 } from '../../shared/events'
 
 /**
- * Pixel widths for gaps (before / between / after).
- * Year jumps change width, but edges stay small and extremes are blended
- * so the board stays readable on one screen + light scroll.
+ * Fit card centers into 0..1 across the board width (no horizontal scroll).
+ * Keeps year-ish spacing, but enforces a minimum gap so tickets don't overlap.
  */
-export function gapWidthsPx(line: HistoryEvent[]): number[] {
-  if (line.length === 0) return [44]
-  if (line.length === 1) return [56, 56]
+export function fitCardPositions(line: HistoryEvent[]): number[] {
+  const n = line.length
+  if (n === 0) return []
+  if (n === 1) return [0.5]
 
   const keys = line.map(eventSortKey)
-  const betweenRaw: number[] = []
-  for (let i = 1; i < keys.length; i++) {
-    const delta = Math.max(keys[i]! - keys[i - 1]!, 1)
-    betweenRaw.push(Math.sqrt(delta))
+  const min = keys[0]!
+  const max = keys[n - 1]!
+  const span = Math.max(max - min, 1)
+  let pos = keys.map((k) => (k - min) / span)
+
+  const minGap = Math.min(0.1, 0.82 / (n - 1))
+  for (let iter = 0; iter < 24; iter++) {
+    for (let i = 1; i < pos.length; i++) {
+      const gap = pos[i]! - pos[i - 1]!
+      if (gap >= minGap) continue
+      const mid = (pos[i]! + pos[i - 1]!) / 2
+      pos[i - 1] = mid - minGap / 2
+      pos[i] = mid + minGap / 2
+    }
+    const lo = pos[0]!
+    const hi = pos[pos.length - 1]!
+    const localSpan = Math.max(hi - lo, 1e-6)
+    pos = pos.map((p) => (p - lo) / localSpan)
   }
 
-  const sum = betweenRaw.reduce((a, b) => a + b, 0) || 1
-  const equal = sum / betweenRaw.length
-  const blended = betweenRaw.map((w) => 0.4 * equal + 0.6 * w)
-  const total = blended.reduce((a, b) => a + b, 0)
-  const minPx = 52
-  const budget = 300
-  const mids = blended.map((w) => minPx + Math.round((w / total) * budget))
-  const edge = 48
-  return [edge, ...mids, edge]
+  const pad = 0.06
+  return pos.map((p) => pad + p * (1 - 2 * pad))
+}
+
+/** Absolute slot bands as left/width fractions (n cards → n+1 slots). */
+export function fitSlotRanges(
+  positions: number[],
+): { left: number; width: number }[] {
+  if (positions.length === 0) return [{ left: 0, width: 1 }]
+
+  const out: { left: number; width: number }[] = [
+    { left: 0, width: positions[0]! },
+  ]
+  for (let i = 1; i < positions.length; i++) {
+    out.push({
+      left: positions[i - 1]!,
+      width: positions[i]! - positions[i - 1]!,
+    })
+  }
+  const last = positions[positions.length - 1]!
+  out.push({ left: last, width: 1 - last })
+  return out
 }
 
 /** Index where `card` belongs among already placed events (0..line.length). */

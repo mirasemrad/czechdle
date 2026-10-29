@@ -1,7 +1,7 @@
 import { formatCzechDate } from '../../shared/dateSeed'
 import { formatEventYear, type HistoryEvent } from '../../shared/events'
 import { HAND_PER_ROUND } from './daily'
-import { gapWidthsPx } from './logic'
+import { fitCardPositions, fitSlotRanges } from './logic'
 import type { TimelineGuess } from './storage'
 
 export type TimelineUI = {
@@ -110,7 +110,6 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
       <section class="timeline-stage">
         <div class="timeline-stage-head">
           <span>Dříve</span>
-          <span class="timeline-scroll-hint">← posuň →</span>
           <span>Později</span>
         </div>
         <div class="timeline-board" data-board></div>
@@ -166,16 +165,6 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
   let selectedId: string | null = null
 
   nextBtn.addEventListener('click', () => nextCb?.())
-  boardEl.addEventListener(
-    'wheel',
-    (e) => {
-      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return
-      if (boardEl.scrollWidth <= boardEl.clientWidth + 1) return
-      e.preventDefault()
-      boardEl.scrollLeft += e.deltaY
-    },
-    { passive: false },
-  )
   closeBtn.addEventListener('click', () => {
     overlay.hidden = true
   })
@@ -276,7 +265,6 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
     }
     drag.ghost.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`
     if (!drag.moved) return
-    maybeAutoScroll(e.clientX)
     const slot = slotAtPoint(e.clientX, e.clientY)
     drag.activeSlot = slot
     highlightSlot(slot)
@@ -355,49 +343,41 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
     })
   }
 
-  const maybeAutoScroll = (clientX: number): void => {
-    const rect = boardEl.getBoundingClientRect()
-    const edge = 56
-    if (clientX < rect.left + edge) {
-      boardEl.scrollLeft -= 18
-    } else if (clientX > rect.right - edge) {
-      boardEl.scrollLeft += 18
-    }
-  }
-
   const renderBoard = (line: HistoryEvent[], fixedIds: Set<string>): void => {
-    const widths = gapWidthsPx(line)
+    const positions = fitCardPositions(line)
+    const slots = fitSlotRanges(positions)
     const parts: string[] = [
       '<div class="timeline-spine" aria-hidden="true"></div>',
       '<div class="timeline-rail">',
     ]
 
-    for (let i = 0; i <= line.length; i++) {
-      const px = widths[i] ?? 48
+    slots.forEach((slot, index) => {
+      const left = `${slot.left * 100}%`
+      const width = `${slot.width * 100}%`
       if (interactive) {
         parts.push(
-          `<button type="button" class="drop-slot timeline-gap" data-index="${i}" style="flex:0 0 ${px}px;width:${px}px" aria-label="Vložit sem"></button>`,
+          `<button type="button" class="drop-slot timeline-gap" data-index="${index}" style="left:${left};width:${width}" aria-label="Vložit sem"></button>`,
         )
       } else {
         parts.push(
-          `<div class="timeline-gap timeline-gap-static" style="flex:0 0 ${px}px;width:${px}px" aria-hidden="true"></div>`,
+          `<div class="timeline-gap timeline-gap-static" style="left:${left};width:${width}" aria-hidden="true"></div>`,
         )
       }
+    })
 
-      if (i < line.length) {
-        const ev = line[i]!
-        const isFixed = fixedIds.has(ev.id)
-        parts.push(`
-          <div class="timeline-node${isFixed ? ' is-fixed' : ' is-played'}">
-            <div class="timeline-ticket">
-              <span class="timeline-ticket-year">${formatEventYear(ev)}</span>
-              <span class="timeline-ticket-title">${ev.title}</span>
-            </div>
-            <span class="timeline-pin" aria-hidden="true"></span>
+    line.forEach((ev, index) => {
+      const isFixed = fixedIds.has(ev.id)
+      const left = `${(positions[index] ?? 0.5) * 100}%`
+      parts.push(`
+        <div class="timeline-node${isFixed ? ' is-fixed' : ' is-played'}" style="left:${left}">
+          <div class="timeline-ticket">
+            <span class="timeline-ticket-year">${formatEventYear(ev)}</span>
+            <span class="timeline-ticket-title">${ev.title}</span>
           </div>
-        `)
-      }
-    }
+          <span class="timeline-pin" aria-hidden="true"></span>
+        </div>
+      `)
+    })
 
     parts.push('</div>')
     boardEl.innerHTML = parts.join('')

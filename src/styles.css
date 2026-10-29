@@ -1410,10 +1410,9 @@ body.smery-dragging .city-card {
 }
 
 .timeline-stage-head {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
   padding: 0 1.15rem 0.4rem;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -1421,42 +1420,18 @@ body.smery-dragging .city-card {
   color: var(--ink-muted);
 }
 
-.timeline-stage-head > span:last-child {
-  text-align: right;
-}
-
-.timeline-scroll-hint {
-  opacity: 0.7;
-  letter-spacing: 0.04em;
-  text-transform: none;
-  font-size: 0.78rem;
-}
-
 .timeline-board {
+  --timeline-pin: 0.62rem;
+  --timeline-spine-y: 1.15rem;
   position: relative;
-  height: 15.5rem;
+  height: 15.25rem;
   margin: 0 0.85rem;
-  padding: 0.75rem 0.65rem 1.05rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  -webkit-overflow-scrolling: touch;
+  padding: 0 0.85rem;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   background: var(--bg-elevated);
-  scrollbar-gutter: stable;
-  scrollbar-width: auto;
-  scrollbar-color: var(--accent) color-mix(in srgb, var(--surface) 80%, transparent);
-}
-
-.timeline-board::-webkit-scrollbar {
-  height: 10px;
-}
-
-.timeline-board::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--accent) 70%, #000);
-  border-radius: 999px;
-  border: 2px solid var(--bg-elevated);
+  box-sizing: border-box;
 }
 
 .timeline-board.awaiting-drop,
@@ -1466,44 +1441,41 @@ body.smery-dragging .city-card {
 
 .timeline-spine {
   position: absolute;
-  left: 0.75rem;
-  right: 0.75rem;
-  bottom: 1.52rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: var(--timeline-spine-y);
   height: 3px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 55%, var(--line-strong));
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
+  transform: translateY(50%);
 }
 
 .timeline-rail {
   position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  width: max-content;
-  min-width: 100%;
+  z-index: 2;
+  width: 100%;
   height: 100%;
-  min-height: 12.5rem;
-  padding: 0 0.35rem 0.15rem;
-  box-sizing: border-box;
 }
 
 .timeline-node {
-  flex: 0 0 auto;
-  width: 7.6rem;
+  position: absolute;
+  bottom: var(--timeline-spine-y);
+  width: clamp(3.6rem, 7vw, 6.1rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.55rem;
-  position: relative;
-  z-index: 2;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  pointer-events: none;
 }
 
 .timeline-ticket {
   width: 100%;
-  padding: 0.55rem 0.55rem 0.6rem;
-  border-radius: 0.7rem;
+  margin-bottom: 0.55rem;
+  padding: 0.45rem 0.45rem 0.5rem;
+  border-radius: 0.65rem;
   border: 1px solid var(--line);
   background: var(--card-face-solid);
   text-align: center;
@@ -1537,12 +1509,14 @@ body.smery-dragging .city-card {
 }
 
 .timeline-pin {
-  width: 0.62rem;
-  height: 0.62rem;
+  width: var(--timeline-pin);
+  height: var(--timeline-pin);
   border-radius: 50%;
   background: var(--accent);
   border: 2px solid var(--bg-elevated);
   box-shadow: 0 0 0 1px var(--accent);
+  transform: translateY(50%);
+  flex: 0 0 auto;
 }
 
 .timeline-card {
@@ -1577,16 +1551,16 @@ body.smery-dragging .city-card {
 
 .timeline-board .drop-slot,
 .timeline-gap-static {
-  position: relative;
-  align-self: stretch;
-  min-height: 100%;
-  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 0;
   background: transparent;
   padding: 0;
   cursor: pointer;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .timeline-gap-static {
@@ -1597,22 +1571,22 @@ body.smery-dragging .city-card {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: 1.42rem;
+  bottom: var(--timeline-spine-y);
   width: 1px;
-  height: 0.7rem;
-  transform: translateX(-50%);
+  height: 0.65rem;
+  transform: translate(-50%, 50%);
   background: var(--line-strong);
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
 .timeline-board.dragging-active .drop-slot,
 .timeline-board.awaiting-drop .drop-slot {
-  background: rgba(110, 181, 255, 0.05);
+  background: rgba(110, 181, 255, 0.04);
 }
 
 .timeline-board .drop-slot.over {
   padding: 0;
-  background: rgba(110, 181, 255, 0.12);
+  background: rgba(110, 181, 255, 0.1);
   border: none;
   box-shadow: none;
 }
@@ -1621,8 +1595,8 @@ body.smery-dragging .city-card {
   content: '';
   position: absolute;
   left: 50%;
-  top: 0.4rem;
-  bottom: 1.5rem;
+  top: 0.55rem;
+  bottom: var(--timeline-spine-y);
   width: 2px;
   transform: translateX(-50%);
   border-radius: 999px;
@@ -1630,16 +1604,12 @@ body.smery-dragging .city-card {
 }
 
 @media (max-width: 720px) {
-  .timeline-node {
-    width: 6.8rem;
-  }
-
   .timeline-ticket-year {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .timeline-ticket-title {
-    font-size: 0.68rem;
+    font-size: 0.66rem;
   }
 
   .timeline-card {
