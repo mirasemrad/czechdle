@@ -1,0 +1,1616 @@
+[
+  {
+    "name": "Adamov",
+    "lat": 49.3014,
+    "lon": 16.6585,
+    "pop": 4616
+  },
+  {
+    "name": "Albrechtice",
+    "lat": 49.7864,
+    "lon": 18.5244,
+    "pop": 3808
+  },
+  {
+    "name": "Aš",
+    "lat": 50.224,
+    "lon": 12.195,
+    "pop": 12684
+  },
+  {
+    "name": "Bechyně",
+    "lat": 49.2952,
+    "lon": 14.4681,
+    "pop": 5880
+  },
+  {
+    "name": "Benešov",
+    "lat": 49.7816,
+    "lon": 14.6869,
+    "pop": 17043
+  },
+  {
+    "name": "Beroun",
+    "lat": 49.9638,
+    "lon": 14.072,
+    "pop": 21521
+  },
+  {
+    "name": "Bílina",
+    "lat": 50.5485,
+    "lon": 13.7755,
+    "pop": 14497
+  },
+  {
+    "name": "Bílovec",
+    "lat": 49.7564,
+    "lon": 18.0158,
+    "pop": 7411
+  },
+  {
+    "name": "Blansko",
+    "lat": 49.3632,
+    "lon": 16.6445,
+    "pop": 20002
+  },
+  {
+    "name": "Blatná",
+    "lat": 49.4249,
+    "lon": 13.8817,
+    "pop": 6669
+  },
+  {
+    "name": "Bohumín",
+    "lat": 49.9041,
+    "lon": 18.357,
+    "pop": 20315
+  },
+  {
+    "name": "Boskovice",
+    "lat": 49.4875,
+    "lon": 16.66,
+    "pop": 12508
+  },
+  {
+    "name": "Brandýs nad Labem-Stará Boleslav",
+    "lat": 50.1864,
+    "lon": 14.6633,
+    "pop": 20313
+  },
+  {
+    "name": "Brno",
+    "lat": 49.1951,
+    "lon": 16.6068,
+    "pop": 402739
+  },
+  {
+    "name": "Broumov",
+    "lat": 50.5857,
+    "lon": 16.3318,
+    "pop": 7108
+  },
+  {
+    "name": "Bruntál",
+    "lat": 49.9884,
+    "lon": 17.4647,
+    "pop": 15037
+  },
+  {
+    "name": "Břeclav",
+    "lat": 48.759,
+    "lon": 16.882,
+    "pop": 24538
+  },
+  {
+    "name": "Bučovice",
+    "lat": 49.1489,
+    "lon": 17.0019,
+    "pop": 6891
+  },
+  {
+    "name": "Budišov nad Budišovkou",
+    "lat": 49.7951,
+    "lon": 17.6297,
+    "pop": 5244
+  },
+  {
+    "name": "Bystřice nad Pernštejnem",
+    "lat": 49.5227,
+    "lon": 16.2615,
+    "pop": 7871
+  },
+  {
+    "name": "Bystřice pod Hostýnem",
+    "lat": 49.3992,
+    "lon": 17.674,
+    "pop": 8002
+  },
+  {
+    "name": "Cvikov",
+    "lat": 50.7767,
+    "lon": 14.633,
+    "pop": 4534
+  },
+  {
+    "name": "Čáslav",
+    "lat": 49.911,
+    "lon": 15.395,
+    "pop": 10399
+  },
+  {
+    "name": "Čelákovice",
+    "lat": 50.1604,
+    "lon": 14.75,
+    "pop": 12474
+  },
+  {
+    "name": "Červený Kostelec",
+    "lat": 50.4763,
+    "lon": 16.213,
+    "pop": 8262
+  },
+  {
+    "name": "Česká Kamenice",
+    "lat": 50.7978,
+    "lon": 14.4178,
+    "pop": 5037
+  },
+  {
+    "name": "Česká Lípa",
+    "lat": 50.6856,
+    "lon": 14.5376,
+    "pop": 36815
+  },
+  {
+    "name": "Česká Třebová",
+    "lat": 49.9019,
+    "lon": 16.4441,
+    "pop": 15010
+  },
+  {
+    "name": "České Budějovice",
+    "lat": 48.9745,
+    "lon": 14.4743,
+    "pop": 97231
+  },
+  {
+    "name": "Český Brod",
+    "lat": 50.0742,
+    "lon": 14.8608,
+    "pop": 7487
+  },
+  {
+    "name": "Český Krumlov",
+    "lat": 48.8108,
+    "lon": 14.3152,
+    "pop": 12797
+  },
+  {
+    "name": "Český Těšín",
+    "lat": 49.7461,
+    "lon": 18.6261,
+    "pop": 23075
+  },
+  {
+    "name": "Dačice",
+    "lat": 49.0816,
+    "lon": 15.4373,
+    "pop": 7157
+  },
+  {
+    "name": "Děčín",
+    "lat": 50.7822,
+    "lon": 14.2148,
+    "pop": 46376
+  },
+  {
+    "name": "Dobruška",
+    "lat": 50.292,
+    "lon": 16.16,
+    "pop": 6532
+  },
+  {
+    "name": "Dobříš",
+    "lat": 49.7811,
+    "lon": 14.1672,
+    "pop": 8870
+  },
+  {
+    "name": "Doksy",
+    "lat": 50.5646,
+    "lon": 14.6556,
+    "pop": 5115
+  },
+  {
+    "name": "Dolní Kounice",
+    "lat": 49.0701,
+    "lon": 16.465,
+    "pop": 2571
+  },
+  {
+    "name": "Domažlice",
+    "lat": 49.4405,
+    "lon": 12.927,
+    "pop": 11133
+  },
+  {
+    "name": "Doubrava",
+    "lat": 49.8588,
+    "lon": 18.4802,
+    "pop": 1200
+  },
+  {
+    "name": "Duchcov",
+    "lat": 50.6039,
+    "lon": 13.7463,
+    "pop": 8695
+  },
+  {
+    "name": "Dvůr Králové nad Labem",
+    "lat": 50.4317,
+    "lon": 15.814,
+    "pop": 15322
+  },
+  {
+    "name": "Frenštát pod Radhoštěm",
+    "lat": 49.5484,
+    "lon": 18.2108,
+    "pop": 10554
+  },
+  {
+    "name": "Frýdek-Místek",
+    "lat": 49.6853,
+    "lon": 18.3484,
+    "pop": 53590
+  },
+  {
+    "name": "Frýdlant",
+    "lat": 50.9214,
+    "lon": 15.0797,
+    "pop": 7379
+  },
+  {
+    "name": "Frýdlant nad Ostravicí",
+    "lat": 49.5928,
+    "lon": 18.3597,
+    "pop": 9835
+  },
+  {
+    "name": "Fulnek",
+    "lat": 49.7124,
+    "lon": 17.9031,
+    "pop": 5472
+  },
+  {
+    "name": "Havířov",
+    "lat": 49.7798,
+    "lon": 18.4369,
+    "pop": 68674
+  },
+  {
+    "name": "Havlíčkův Brod",
+    "lat": 49.6079,
+    "lon": 15.5807,
+    "pop": 23791
+  },
+  {
+    "name": "Hlinsko",
+    "lat": 49.7621,
+    "lon": 15.9076,
+    "pop": 9563
+  },
+  {
+    "name": "Hluboká nad Vltavou",
+    "lat": 49.0523,
+    "lon": 14.4343,
+    "pop": 5626
+  },
+  {
+    "name": "Hlučín",
+    "lat": 49.8968,
+    "lon": 18.192,
+    "pop": 13352
+  },
+  {
+    "name": "Hodonín",
+    "lat": 48.8489,
+    "lon": 17.1324,
+    "pop": 23517
+  },
+  {
+    "name": "Holešov",
+    "lat": 49.3333,
+    "lon": 17.5783,
+    "pop": 11616
+  },
+  {
+    "name": "Holice",
+    "lat": 50.066,
+    "lon": 15.9859,
+    "pop": 6761
+  },
+  {
+    "name": "Holýšov",
+    "lat": 49.5936,
+    "lon": 13.1013,
+    "pop": 5647
+  },
+  {
+    "name": "Horažďovice",
+    "lat": 49.3204,
+    "lon": 13.701,
+    "pop": 5103
+  },
+  {
+    "name": "Horní Bříza",
+    "lat": 49.8403,
+    "lon": 13.3614,
+    "pop": 4066
+  },
+  {
+    "name": "Horšovský Týn",
+    "lat": 49.5297,
+    "lon": 12.9441,
+    "pop": 5046
+  },
+  {
+    "name": "Hořice",
+    "lat": 50.3661,
+    "lon": 15.6319,
+    "pop": 8476
+  },
+  {
+    "name": "Hostivice",
+    "lat": 50.0816,
+    "lon": 14.258,
+    "pop": 9655
+  },
+  {
+    "name": "Hradec Králové",
+    "lat": 50.2104,
+    "lon": 15.8252,
+    "pop": 94311
+  },
+  {
+    "name": "Hranice",
+    "lat": 49.5479,
+    "lon": 17.7347,
+    "pop": 17969
+  },
+  {
+    "name": "Hronov",
+    "lat": 50.4797,
+    "lon": 16.1823,
+    "pop": 6094
+  },
+  {
+    "name": "Humpolec",
+    "lat": 49.5415,
+    "lon": 15.3593,
+    "pop": 11522
+  },
+  {
+    "name": "Hustopeče",
+    "lat": 48.9409,
+    "lon": 16.7376,
+    "pop": 6388
+  },
+  {
+    "name": "Cheb",
+    "lat": 50.0796,
+    "lon": 12.3739,
+    "pop": 32808
+  },
+  {
+    "name": "Choceň",
+    "lat": 50.0016,
+    "lon": 16.223,
+    "pop": 9229
+  },
+  {
+    "name": "Chodov",
+    "lat": 50.2412,
+    "lon": 12.7126,
+    "pop": 50043
+  },
+  {
+    "name": "Chomutov",
+    "lat": 50.4605,
+    "lon": 13.4178,
+    "pop": 46771
+  },
+  {
+    "name": "Chotěboř",
+    "lat": 49.7207,
+    "lon": 15.6702,
+    "pop": 9092
+  },
+  {
+    "name": "Chrudim",
+    "lat": 49.9511,
+    "lon": 15.7956,
+    "pop": 23564
+  },
+  {
+    "name": "Ivančice",
+    "lat": 49.1014,
+    "lon": 16.3775,
+    "pop": 9898
+  },
+  {
+    "name": "Jablonec nad Nisou",
+    "lat": 50.7245,
+    "lon": 15.1711,
+    "pop": 46209
+  },
+  {
+    "name": "Jablonné nad Orlicí",
+    "lat": 50.0296,
+    "lon": 16.6005,
+    "pop": 3078
+  },
+  {
+    "name": "Jablunkov",
+    "lat": 49.5767,
+    "lon": 18.7646,
+    "pop": 5257
+  },
+  {
+    "name": "Jáchymov",
+    "lat": 50.3716,
+    "lon": 12.9346,
+    "pop": 2304
+  },
+  {
+    "name": "Jaroměř",
+    "lat": 50.3564,
+    "lon": 15.9214,
+    "pop": 12483
+  },
+  {
+    "name": "Javorník",
+    "lat": 50.3906,
+    "lon": 17.0029,
+    "pop": 3362
+  },
+  {
+    "name": "Jemnice",
+    "lat": 49.0192,
+    "lon": 15.5701,
+    "pop": 4126
+  },
+  {
+    "name": "Jeseník",
+    "lat": 50.2296,
+    "lon": 17.2048,
+    "pop": 10456
+  },
+  {
+    "name": "Jičín",
+    "lat": 50.4372,
+    "lon": 15.3516,
+    "pop": 16101
+  },
+  {
+    "name": "Jihlava",
+    "lat": 49.3961,
+    "lon": 15.5912,
+    "pop": 54624
+  },
+  {
+    "name": "Jilemnice",
+    "lat": 50.6089,
+    "lon": 15.5065,
+    "pop": 5377
+  },
+  {
+    "name": "Jílové u Prahy",
+    "lat": 49.8954,
+    "lon": 14.4934,
+    "pop": 5262
+  },
+  {
+    "name": "Jindřichův Hradec",
+    "lat": 49.1441,
+    "lon": 15.003,
+    "pop": 20540
+  },
+  {
+    "name": "Jirkov",
+    "lat": 50.4998,
+    "lon": 13.4478,
+    "pop": 20065
+  },
+  {
+    "name": "Jiříkov",
+    "lat": 50.9953,
+    "lon": 14.5693,
+    "pop": 3507
+  },
+  {
+    "name": "Kadaň",
+    "lat": 50.376,
+    "lon": 13.2713,
+    "pop": 18090
+  },
+  {
+    "name": "Kamenice nad Lipou",
+    "lat": 49.303,
+    "lon": 15.0802,
+    "pop": 3735
+  },
+  {
+    "name": "Kaplice",
+    "lat": 48.7385,
+    "lon": 14.4962,
+    "pop": 7531
+  },
+  {
+    "name": "Karlovy Vary",
+    "lat": 50.232,
+    "lon": 12.871,
+    "pop": 49073
+  },
+  {
+    "name": "Karviná",
+    "lat": 49.854,
+    "lon": 18.5417,
+    "pop": 48937
+  },
+  {
+    "name": "Kladno",
+    "lat": 50.1473,
+    "lon": 14.1028,
+    "pop": 69664
+  },
+  {
+    "name": "Klášterec nad Ohří",
+    "lat": 50.3886,
+    "lon": 13.1713,
+    "pop": 14068
+  },
+  {
+    "name": "Klatovy",
+    "lat": 49.3955,
+    "lon": 13.2952,
+    "pop": 22763
+  },
+  {
+    "name": "Klimkovice",
+    "lat": 49.788,
+    "lon": 18.1259,
+    "pop": 4454
+  },
+  {
+    "name": "Kojetín",
+    "lat": 49.3518,
+    "lon": 17.3021,
+    "pop": 5748
+  },
+  {
+    "name": "Kolín",
+    "lat": 50.0281,
+    "lon": 15.2006,
+    "pop": 33444
+  },
+  {
+    "name": "Kopřivnice",
+    "lat": 49.5995,
+    "lon": 18.1448,
+    "pop": 21374
+  },
+  {
+    "name": "Kostelec nad Orlicí",
+    "lat": 50.1227,
+    "lon": 16.2132,
+    "pop": 6252
+  },
+  {
+    "name": "Králíky",
+    "lat": 50.0838,
+    "lon": 16.7604,
+    "pop": 4097
+  },
+  {
+    "name": "Kralovice",
+    "lat": 49.9819,
+    "lon": 13.4875,
+    "pop": 3450
+  },
+  {
+    "name": "Kralupy nad Vltavou",
+    "lat": 50.2411,
+    "lon": 14.3115,
+    "pop": 19005
+  },
+  {
+    "name": "Králův Dvůr",
+    "lat": 49.9498,
+    "lon": 14.0345,
+    "pop": 10598
+  },
+  {
+    "name": "Kraslice",
+    "lat": 50.3238,
+    "lon": 12.5174,
+    "pop": 6432
+  },
+  {
+    "name": "Krnov",
+    "lat": 50.0897,
+    "lon": 17.7039,
+    "pop": 22518
+  },
+  {
+    "name": "Kroměříž",
+    "lat": 49.2979,
+    "lon": 17.3931,
+    "pop": 27917
+  },
+  {
+    "name": "Krupka",
+    "lat": 50.6845,
+    "lon": 13.8583,
+    "pop": 12793
+  },
+  {
+    "name": "Kuřim",
+    "lat": 49.2985,
+    "lon": 16.5314,
+    "pop": 11860
+  },
+  {
+    "name": "Kutná Hora",
+    "lat": 49.9484,
+    "lon": 15.2682,
+    "pop": 21642
+  },
+  {
+    "name": "Kyjov",
+    "lat": 49.0102,
+    "lon": 17.1225,
+    "pop": 10645
+  },
+  {
+    "name": "Lanškroun",
+    "lat": 49.9122,
+    "lon": 16.6119,
+    "pop": 9776
+  },
+  {
+    "name": "Lázně Bohdaneč",
+    "lat": 50.0756,
+    "lon": 15.6798,
+    "pop": 3355
+  },
+  {
+    "name": "Ledeč nad Sázavou",
+    "lat": 49.6952,
+    "lon": 15.2778,
+    "pop": 5613
+  },
+  {
+    "name": "Lednice",
+    "lat": 48.7998,
+    "lon": 16.8034,
+    "pop": 2501
+  },
+  {
+    "name": "Letohrad",
+    "lat": 50.0358,
+    "lon": 16.4988,
+    "pop": 6407
+  },
+  {
+    "name": "Letovice",
+    "lat": 49.5471,
+    "lon": 16.5736,
+    "pop": 7124
+  },
+  {
+    "name": "Liberec",
+    "lat": 50.7663,
+    "lon": 15.0543,
+    "pop": 108090
+  },
+  {
+    "name": "Lipník nad Bečvou",
+    "lat": 49.5275,
+    "lon": 17.5858,
+    "pop": 7955
+  },
+  {
+    "name": "Litoměřice",
+    "lat": 50.5335,
+    "lon": 14.1318,
+    "pop": 22767
+  },
+  {
+    "name": "Litomyšl",
+    "lat": 49.872,
+    "lon": 16.3101,
+    "pop": 10448
+  },
+  {
+    "name": "Litovel",
+    "lat": 49.7012,
+    "lon": 17.0762,
+    "pop": 9510
+  },
+  {
+    "name": "Litvínov",
+    "lat": 50.6042,
+    "lon": 13.6181,
+    "pop": 22387
+  },
+  {
+    "name": "Loket",
+    "lat": 50.1862,
+    "lon": 12.754,
+    "pop": 4438
+  },
+  {
+    "name": "Lomnice nad Popelkou",
+    "lat": 50.5306,
+    "lon": 15.3735,
+    "pop": 5911
+  },
+  {
+    "name": "Louny",
+    "lat": 50.357,
+    "lon": 13.7968,
+    "pop": 18068
+  },
+  {
+    "name": "Lovosice",
+    "lat": 50.515,
+    "lon": 14.051,
+    "pop": 8727
+  },
+  {
+    "name": "Luhačovice",
+    "lat": 49.0998,
+    "lon": 17.7575,
+    "pop": 5029
+  },
+  {
+    "name": "Lysá nad Labem",
+    "lat": 50.2014,
+    "lon": 14.8328,
+    "pop": 10004
+  },
+  {
+    "name": "Mariánské Lázně",
+    "lat": 49.9646,
+    "lon": 12.701,
+    "pop": 14052
+  },
+  {
+    "name": "Mělník",
+    "lat": 50.3505,
+    "lon": 14.4741,
+    "pop": 20278
+  },
+  {
+    "name": "Mikulov",
+    "lat": 48.8056,
+    "lon": 16.6378,
+    "pop": 7577
+  },
+  {
+    "name": "Milevsko",
+    "lat": 49.4509,
+    "lon": 14.36,
+    "pop": 7950
+  },
+  {
+    "name": "Mimoň",
+    "lat": 50.6587,
+    "lon": 14.7248,
+    "pop": 6387
+  },
+  {
+    "name": "Miroslav",
+    "lat": 48.9477,
+    "lon": 16.3125,
+    "pop": 3711
+  },
+  {
+    "name": "Mladá Boleslav",
+    "lat": 50.4114,
+    "lon": 14.9031,
+    "pop": 47346
+  },
+  {
+    "name": "Mnichovo Hradiště",
+    "lat": 50.5213,
+    "lon": 14.9714,
+    "pop": 9048
+  },
+  {
+    "name": "Modřice",
+    "lat": 49.1279,
+    "lon": 16.6144,
+    "pop": 5755
+  },
+  {
+    "name": "Mohelnice",
+    "lat": 49.777,
+    "lon": 16.9195,
+    "pop": 9782
+  },
+  {
+    "name": "Moravská Třebová",
+    "lat": 49.7579,
+    "lon": 16.6643,
+    "pop": 9550
+  },
+  {
+    "name": "Moravské Budějovice",
+    "lat": 49.052,
+    "lon": 15.8086,
+    "pop": 7098
+  },
+  {
+    "name": "Moravský Krumlov",
+    "lat": 49.0489,
+    "lon": 16.3117,
+    "pop": 5667
+  },
+  {
+    "name": "Most",
+    "lat": 50.503,
+    "lon": 13.6362,
+    "pop": 63474
+  },
+  {
+    "name": "Náchod",
+    "lat": 50.4167,
+    "lon": 16.163,
+    "pop": 19827
+  },
+  {
+    "name": "Náměšť nad Oslavou",
+    "lat": 49.2073,
+    "lon": 16.1585,
+    "pop": 4767
+  },
+  {
+    "name": "Nejdek",
+    "lat": 50.3254,
+    "lon": 12.7293,
+    "pop": 9042
+  },
+  {
+    "name": "Nepomuk",
+    "lat": 49.4893,
+    "lon": 13.582,
+    "pop": 3562
+  },
+  {
+    "name": "Neratovice",
+    "lat": 50.2593,
+    "lon": 14.5176,
+    "pop": 16360
+  },
+  {
+    "name": "Nová Paka",
+    "lat": 50.4947,
+    "lon": 15.515,
+    "pop": 8979
+  },
+  {
+    "name": "Nové Město na Moravě",
+    "lat": 49.5614,
+    "lon": 16.0742,
+    "pop": 9834
+  },
+  {
+    "name": "Nové Město nad Metují",
+    "lat": 50.3446,
+    "lon": 16.1515,
+    "pop": 9181
+  },
+  {
+    "name": "Nový Bor",
+    "lat": 50.7576,
+    "lon": 14.5557,
+    "pop": 11318
+  },
+  {
+    "name": "Nový Jičín",
+    "lat": 49.5944,
+    "lon": 18.0103,
+    "pop": 23005
+  },
+  {
+    "name": "Nymburk",
+    "lat": 50.1861,
+    "lon": 15.0417,
+    "pop": 15642
+  },
+  {
+    "name": "Nýřany",
+    "lat": 49.7115,
+    "lon": 13.2119,
+    "pop": 6991
+  },
+  {
+    "name": "Odry",
+    "lat": 49.6625,
+    "lon": 17.8308,
+    "pop": 7314
+  },
+  {
+    "name": "Olomouc",
+    "lat": 49.5938,
+    "lon": 17.2509,
+    "pop": 103063
+  },
+  {
+    "name": "Opava",
+    "lat": 49.9387,
+    "lon": 17.9026,
+    "pop": 55109
+  },
+  {
+    "name": "Opočno",
+    "lat": 50.2674,
+    "lon": 16.1148,
+    "pop": 3148
+  },
+  {
+    "name": "Orlová",
+    "lat": 49.8453,
+    "lon": 18.4302,
+    "pop": 27540
+  },
+  {
+    "name": "Osek",
+    "lat": 50.6212,
+    "lon": 13.6903,
+    "pop": 5569
+  },
+  {
+    "name": "Ostrava",
+    "lat": 49.8209,
+    "lon": 18.2625,
+    "pop": 283187
+  },
+  {
+    "name": "Ostrov",
+    "lat": 50.3059,
+    "lon": 12.947,
+    "pop": 15681
+  },
+  {
+    "name": "Otrokovice",
+    "lat": 49.2099,
+    "lon": 17.5308,
+    "pop": 17401
+  },
+  {
+    "name": "Pacov",
+    "lat": 49.4708,
+    "lon": 15.0017,
+    "pop": 4743
+  },
+  {
+    "name": "Pardubice",
+    "lat": 50.0343,
+    "lon": 15.7812,
+    "pop": 92319
+  },
+  {
+    "name": "Pelhřimov",
+    "lat": 49.4313,
+    "lon": 15.2234,
+    "pop": 16206
+  },
+  {
+    "name": "Petřvald",
+    "lat": 49.831,
+    "lon": 18.3852,
+    "pop": 7409
+  },
+  {
+    "name": "Písek",
+    "lat": 49.3089,
+    "lon": 14.1475,
+    "pop": 31121
+  },
+  {
+    "name": "Planá",
+    "lat": 49.8682,
+    "lon": 12.7438,
+    "pop": 5493
+  },
+  {
+    "name": "Plzeň",
+    "lat": 49.7384,
+    "lon": 13.3736,
+    "pop": 187928
+  },
+  {
+    "name": "Počátky",
+    "lat": 49.2602,
+    "lon": 15.2402,
+    "pop": 2991
+  },
+  {
+    "name": "Poděbrady",
+    "lat": 50.1424,
+    "lon": 15.1188,
+    "pop": 15232
+  },
+  {
+    "name": "Pohořelice",
+    "lat": 48.9812,
+    "lon": 16.5245,
+    "pop": 6126
+  },
+  {
+    "name": "Police nad Metují",
+    "lat": 50.5369,
+    "lon": 16.233,
+    "pop": 4131
+  },
+  {
+    "name": "Polička",
+    "lat": 49.7147,
+    "lon": 16.2654,
+    "pop": 9051
+  },
+  {
+    "name": "Praha",
+    "lat": 50.0755,
+    "lon": 14.4378,
+    "pop": 1397880
+  },
+  {
+    "name": "Prachatice",
+    "lat": 49.0129,
+    "lon": 13.9975,
+    "pop": 11119
+  },
+  {
+    "name": "Prostějov",
+    "lat": 49.4721,
+    "lon": 17.1118,
+    "pop": 43408
+  },
+  {
+    "name": "Přelouč",
+    "lat": 50.0398,
+    "lon": 15.5603,
+    "pop": 10203
+  },
+  {
+    "name": "Přerov",
+    "lat": 49.4551,
+    "lon": 17.4509,
+    "pop": 40906
+  },
+  {
+    "name": "Přeštice",
+    "lat": 49.573,
+    "lon": 13.3326,
+    "pop": 6792
+  },
+  {
+    "name": "Příbor",
+    "lat": 49.6409,
+    "lon": 18.145,
+    "pop": 9300
+  },
+  {
+    "name": "Příbram",
+    "lat": 49.6899,
+    "lon": 14.0104,
+    "pop": 32773
+  },
+  {
+    "name": "Přibyslav",
+    "lat": 49.5768,
+    "lon": 15.7385,
+    "pop": 4076
+  },
+  {
+    "name": "Rájec-Jestřebí",
+    "lat": 49.4105,
+    "lon": 16.641,
+    "pop": 3736
+  },
+  {
+    "name": "Rakovník",
+    "lat": 50.1037,
+    "lon": 13.7334,
+    "pop": 15682
+  },
+  {
+    "name": "Rokycany",
+    "lat": 49.7427,
+    "lon": 13.5946,
+    "pop": 14381
+  },
+  {
+    "name": "Rosice",
+    "lat": 49.1823,
+    "lon": 16.3878,
+    "pop": 6784
+  },
+  {
+    "name": "Roudnice nad Labem",
+    "lat": 50.4253,
+    "lon": 14.2618,
+    "pop": 12668
+  },
+  {
+    "name": "Roztoky",
+    "lat": 50.1584,
+    "lon": 14.397,
+    "pop": 9088
+  },
+  {
+    "name": "Rožnov pod Radhoštěm",
+    "lat": 49.4585,
+    "lon": 18.143,
+    "pop": 16063
+  },
+  {
+    "name": "Rumburk",
+    "lat": 50.9515,
+    "lon": 14.557,
+    "pop": 10815
+  },
+  {
+    "name": "Rychnov nad Kněžnou",
+    "lat": 50.1628,
+    "lon": 16.2749,
+    "pop": 11420
+  },
+  {
+    "name": "Rychvald",
+    "lat": 49.8663,
+    "lon": 18.3763,
+    "pop": 7787
+  },
+  {
+    "name": "Rýmařov",
+    "lat": 49.9318,
+    "lon": 17.2718,
+    "pop": 7763
+  },
+  {
+    "name": "Říčany",
+    "lat": 49.9917,
+    "lon": 14.6543,
+    "pop": 17143
+  },
+  {
+    "name": "Sedlčany",
+    "lat": 49.6606,
+    "lon": 14.4266,
+    "pop": 6767
+  },
+  {
+    "name": "Semily",
+    "lat": 50.602,
+    "lon": 15.3355,
+    "pop": 8022
+  },
+  {
+    "name": "Sezemice",
+    "lat": 50.0666,
+    "lon": 15.8527,
+    "pop": 4451
+  },
+  {
+    "name": "Skuteč",
+    "lat": 49.8435,
+    "lon": 15.9966,
+    "pop": 5020
+  },
+  {
+    "name": "Slaný",
+    "lat": 50.2305,
+    "lon": 14.087,
+    "pop": 16937
+  },
+  {
+    "name": "Slavkov u Brna",
+    "lat": 49.1533,
+    "lon": 16.8765,
+    "pop": 7258
+  },
+  {
+    "name": "Soběslav",
+    "lat": 49.26,
+    "lon": 14.7186,
+    "pop": 7070
+  },
+  {
+    "name": "Sokolov",
+    "lat": 50.1814,
+    "lon": 12.6401,
+    "pop": 22007
+  },
+  {
+    "name": "Strakonice",
+    "lat": 49.2614,
+    "lon": 13.9024,
+    "pop": 22355
+  },
+  {
+    "name": "Strážnice",
+    "lat": 48.901,
+    "lon": 17.3168,
+    "pop": 5311
+  },
+  {
+    "name": "Stříbro",
+    "lat": 49.753,
+    "lon": 12.997,
+    "pop": 8060
+  },
+  {
+    "name": "Studénka",
+    "lat": 49.7234,
+    "lon": 18.0785,
+    "pop": 9302
+  },
+  {
+    "name": "Sušice",
+    "lat": 49.2311,
+    "lon": 13.5201,
+    "pop": 10740
+  },
+  {
+    "name": "Světlá nad Sázavou",
+    "lat": 49.668,
+    "lon": 15.404,
+    "pop": 6394
+  },
+  {
+    "name": "Svitavy",
+    "lat": 49.7559,
+    "lon": 16.4683,
+    "pop": 16073
+  },
+  {
+    "name": "Šenov",
+    "lat": 49.7932,
+    "lon": 18.3761,
+    "pop": 6639
+  },
+  {
+    "name": "Šlapanice",
+    "lat": 49.1686,
+    "lon": 16.7273,
+    "pop": 7915
+  },
+  {
+    "name": "Šluknov",
+    "lat": 51.0037,
+    "lon": 14.4527,
+    "pop": 5629
+  },
+  {
+    "name": "Šternberk",
+    "lat": 49.7304,
+    "lon": 17.2989,
+    "pop": 13239
+  },
+  {
+    "name": "Štětí",
+    "lat": 50.453,
+    "lon": 14.3742,
+    "pop": 8553
+  },
+  {
+    "name": "Šumperk",
+    "lat": 49.9653,
+    "lon": 16.9706,
+    "pop": 24735
+  },
+  {
+    "name": "Tábor",
+    "lat": 49.4144,
+    "lon": 14.6578,
+    "pop": 34356
+  },
+  {
+    "name": "Tachov",
+    "lat": 49.7953,
+    "lon": 12.6336,
+    "pop": 14097
+  },
+  {
+    "name": "Telč",
+    "lat": 49.1842,
+    "lon": 15.4528,
+    "pop": 5134
+  },
+  {
+    "name": "Teplice",
+    "lat": 50.6404,
+    "lon": 13.8245,
+    "pop": 50912
+  },
+  {
+    "name": "Tišnov",
+    "lat": 49.3486,
+    "lon": 16.4244,
+    "pop": 9225
+  },
+  {
+    "name": "Toužim",
+    "lat": 50.0603,
+    "lon": 12.9851,
+    "pop": 3465
+  },
+  {
+    "name": "Trhové Sviny",
+    "lat": 48.8423,
+    "lon": 14.6392,
+    "pop": 5262
+  },
+  {
+    "name": "Trutnov",
+    "lat": 50.561,
+    "lon": 15.9128,
+    "pop": 29607
+  },
+  {
+    "name": "Třanovice",
+    "lat": 49.709,
+    "lon": 18.527,
+    "pop": 1000
+  },
+  {
+    "name": "Třebíč",
+    "lat": 49.2149,
+    "lon": 15.8817,
+    "pop": 34530
+  },
+  {
+    "name": "Třeboň",
+    "lat": 49.0037,
+    "lon": 14.7706,
+    "pop": 8270
+  },
+  {
+    "name": "Třemošná",
+    "lat": 49.8159,
+    "lon": 13.285,
+    "pop": 5052
+  },
+  {
+    "name": "Třešť",
+    "lat": 49.2909,
+    "lon": 15.4821,
+    "pop": 5790
+  },
+  {
+    "name": "Třinec",
+    "lat": 49.6776,
+    "lon": 18.6708,
+    "pop": 33852
+  },
+  {
+    "name": "Turnov",
+    "lat": 50.5855,
+    "lon": 15.1515,
+    "pop": 14577
+  },
+  {
+    "name": "Týn nad Vltavou",
+    "lat": 49.2234,
+    "lon": 14.4206,
+    "pop": 7774
+  },
+  {
+    "name": "Týniště nad Orlicí",
+    "lat": 50.151,
+    "lon": 16.0776,
+    "pop": 6148
+  },
+  {
+    "name": "Uherské Hradiště",
+    "lat": 49.0698,
+    "lon": 17.4607,
+    "pop": 24887
+  },
+  {
+    "name": "Uherský Brod",
+    "lat": 49.0251,
+    "lon": 17.6472,
+    "pop": 16367
+  },
+  {
+    "name": "Uničov",
+    "lat": 49.7709,
+    "lon": 17.1214,
+    "pop": 11237
+  },
+  {
+    "name": "Úpice",
+    "lat": 50.5125,
+    "lon": 16.0161,
+    "pop": 7148
+  },
+  {
+    "name": "Ústí nad Labem",
+    "lat": 50.6607,
+    "lon": 14.0323,
+    "pop": 90866
+  },
+  {
+    "name": "Ústí nad Orlicí",
+    "lat": 49.9739,
+    "lon": 16.3936,
+    "pop": 14011
+  },
+  {
+    "name": "Valašské Meziříčí",
+    "lat": 49.4718,
+    "lon": 17.9711,
+    "pop": 22580
+  },
+  {
+    "name": "Valtice",
+    "lat": 48.7407,
+    "lon": 16.7552,
+    "pop": 3580
+  },
+  {
+    "name": "Varnsdorf",
+    "lat": 50.9115,
+    "lon": 14.6182,
+    "pop": 14704
+  },
+  {
+    "name": "Velká Bíteš",
+    "lat": 49.2887,
+    "lon": 16.2274,
+    "pop": 5482
+  },
+  {
+    "name": "Velké Meziříčí",
+    "lat": 49.3552,
+    "lon": 16.0123,
+    "pop": 11608
+  },
+  {
+    "name": "Veselí nad Lužnicí",
+    "lat": 49.1864,
+    "lon": 14.6973,
+    "pop": 6515
+  },
+  {
+    "name": "Veselí nad Moravou",
+    "lat": 48.9536,
+    "lon": 17.3765,
+    "pop": 10623
+  },
+  {
+    "name": "Vidnava",
+    "lat": 50.3723,
+    "lon": 17.1863,
+    "pop": 1190
+  },
+  {
+    "name": "Vimperk",
+    "lat": 49.0585,
+    "lon": 13.7742,
+    "pop": 7289
+  },
+  {
+    "name": "Vítkov",
+    "lat": 49.7744,
+    "lon": 17.7494,
+    "pop": 5508
+  },
+  {
+    "name": "Vizovice",
+    "lat": 49.2229,
+    "lon": 17.8545,
+    "pop": 4845
+  },
+  {
+    "name": "Vlašim",
+    "lat": 49.7064,
+    "lon": 14.8987,
+    "pop": 11434
+  },
+  {
+    "name": "Vodňany",
+    "lat": 49.1479,
+    "lon": 14.1751,
+    "pop": 7383
+  },
+  {
+    "name": "Vrchlabí",
+    "lat": 50.627,
+    "lon": 15.609,
+    "pop": 12102
+  },
+  {
+    "name": "Vsetín",
+    "lat": 49.3388,
+    "lon": 17.9962,
+    "pop": 25185
+  },
+  {
+    "name": "Vysoké Mýto",
+    "lat": 49.9532,
+    "lon": 16.1617,
+    "pop": 12560
+  },
+  {
+    "name": "Vyškov",
+    "lat": 49.2775,
+    "lon": 16.999,
+    "pop": 20645
+  },
+  {
+    "name": "Zábřeh",
+    "lat": 49.8824,
+    "lon": 16.8722,
+    "pop": 13320
+  },
+  {
+    "name": "Zlaté Hory",
+    "lat": 50.2638,
+    "lon": 17.3961,
+    "pop": 4588
+  },
+  {
+    "name": "Zlín",
+    "lat": 49.2264,
+    "lon": 17.6667,
+    "pop": 74684
+  },
+  {
+    "name": "Znojmo",
+    "lat": 48.8555,
+    "lon": 16.0488,
+    "pop": 34172
+  },
+  {
+    "name": "Žacléř",
+    "lat": 50.6634,
+    "lon": 15.9106,
+    "pop": 4286
+  },
+  {
+    "name": "Žamberk",
+    "lat": 50.086,
+    "lon": 16.4674,
+    "pop": 5819
+  },
+  {
+    "name": "Žatec",
+    "lat": 50.3272,
+    "lon": 13.5458,
+    "pop": 18959
+  },
+  {
+    "name": "Žďár nad Sázavou",
+    "lat": 49.5627,
+    "lon": 15.9392,
+    "pop": 20404
+  },
+  {
+    "name": "Železný Brod",
+    "lat": 50.6427,
+    "lon": 15.2541,
+    "pop": 6043
+  },
+  {
+    "name": "Židlochovice",
+    "lat": 49.0395,
+    "lon": 16.6188,
+    "pop": 3676
+  }
+]
