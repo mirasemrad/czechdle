@@ -107,12 +107,12 @@ export function startDailyGame(app: HTMLElement): void {
     map.disableGuessing()
     map.showRound({ lat, lon }, { lat: city.lat, lon: city.lon })
     ui.showFeedback(dist)
-    ui.setHint('Blue = guess, coral = correct spot.')
+    ui.setHint('Modrá = tip, korálová = správné místo.')
     ui.setRunningScore(
       guesses.reduce((s, g) => s + g.distanceKm, 0),
       guesses.length,
     )
-    ui.setNextEnabled(true, index >= CITIES_PER_DAY - 1 ? 'Result' : 'Next')
+    ui.setNextEnabled(true, index >= CITIES_PER_DAY - 1 ? 'Výsledek' : 'Další')
   }
 
   const startRound = (): void => {
@@ -122,12 +122,12 @@ export function startDailyGame(app: HTMLElement): void {
     ui.setProgress(index + 1, CITIES_PER_DAY)
     ui.setCity(city.name)
     ui.clearFeedback()
-    ui.setHint('Click the map — you get one guess.')
+    ui.setHint('Klikni na mapu — máš jeden tip.')
     ui.setRunningScore(
       guesses.reduce((s, g) => s + g.distanceKm, 0),
       guesses.length,
     )
-    ui.setNextEnabled(false, index >= CITIES_PER_DAY - 1 ? 'Result' : 'Next')
+    ui.setNextEnabled(false, index >= CITIES_PER_DAY - 1 ? 'Výsledek' : 'Další')
     phase = 'guessing'
     map.enableGuessing((p) => handleGuess(p.lat, p.lon))
   }
@@ -145,8 +145,8 @@ export function startDailyGame(app: HTMLElement): void {
         completedAt: new Date().toISOString(),
       })
       map.disableGuessing()
-      ui.setHint("Today's challenge is done. A new set tomorrow.")
-      ui.setNextEnabled(false, 'Done')
+      ui.setHint("Dnešní výzva je hotová. Nová sada zítra.")
+      ui.setNextEnabled(false, 'Hotovo')
       ui.showResult({
         dateKey,
         guesses,
@@ -202,9 +202,9 @@ export function startPracticeGame(
     map.disableGuessing()
     map.showRound({ lat, lon }, { lat: city.lat, lon: city.lon })
     ui.showFeedback(dist)
-    ui.setHint('Blue = guess, coral = correct spot.')
+    ui.setHint('Modrá = tip, korálová = správné místo.')
     ui.setPracticeStats(totalKm, round)
-    ui.setNextEnabled(true, 'Next city')
+    ui.setNextEnabled(true, 'Další město')
   }
 
   const startRound = (): void => {
@@ -214,9 +214,9 @@ export function startPracticeGame(
     ui.setPracticeProgress(round + 1)
     ui.setCity(city.name)
     ui.clearFeedback()
-    ui.setHint('Click the map — you get one guess.')
+    ui.setHint('Klikni na mapu — máš jeden tip.')
     ui.setPracticeStats(totalKm, round)
-    ui.setNextEnabled(false, 'Next city')
+    ui.setNextEnabled(false, 'Další město')
     phase = 'guessing'
     map.enableGuessing((p) => handleGuess(p.lat, p.lon))
   }
@@ -248,9 +248,9 @@ function showCompleted(
   ui.setProgress(CITIES_PER_DAY, CITIES_PER_DAY)
   ui.setCity(last.cityName)
   ui.showFeedback(last.distanceKm)
-  ui.setHint("You've already finished today's challenge. A new set tomorrow.")
+  ui.setHint("Dnešní výzvu už máš hotovou. Nová sada zítra.")
   ui.setRunningScore(totalKm, guesses.length)
-  ui.setNextEnabled(true, 'Result')
+  ui.setNextEnabled(true, 'Výsledek')
   ui.onNext(() => {
     ui.showResult({
       dateKey,

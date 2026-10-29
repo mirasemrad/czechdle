@@ -64,47 +64,47 @@ export function mountModePicker(
 ): void {
   app.innerHTML = `
     <main class="mode-picker">
-      <a class="back-link" href="/">← Home</a>
-      <h1 class="mode-brand">Directions</h1>
+      <a class="back-link" href="/">← Domů</a>
+      <h1 class="mode-brand">Směry</h1>
       <p class="mode-lead">
-        Drag 5 city cards onto the axis from the starting city — in the right order.
+        Přetáhni 5 karet měst na osu od výchozího města — ve správném pořadí.
       </p>
 
       <section class="mode-section">
-        <h2 class="mode-section-title">Daily challenge</h2>
-        <p class="mode-section-lead">One set per day. Your score is saved.</p>
+        <h2 class="mode-section-title">Denní výzva</h2>
+        <p class="mode-section-lead">Jedna sada denně. Skóre se uloží.</p>
         <div class="mode-actions mode-actions-daily">
           <button type="button" class="mode-card mode-card-daily mode-card-forest" data-daily-ew>
             <span class="mode-card-meta">
-              <span>Daily</span>
-              <span>W–E</span>
+              <span>Denní</span>
+              <span>Z–V</span>
             </span>
-            <h3>West–East</h3>
-            <p>Horizontal axis from the starting city.</p>
-            <span class="mode-play">Play today's →</span>
+            <h3>Západ–Východ</h3>
+            <p>Vodorovná osa od výchozího města.</p>
+            <span class="mode-play">Hrát dnešní →</span>
           </button>
           <button type="button" class="mode-card mode-card-daily mode-card-sky" data-daily-ns>
             <span class="mode-card-meta">
-              <span>Daily</span>
-              <span>N–S</span>
+              <span>Denní</span>
+              <span>S–J</span>
             </span>
-            <h3>North–South</h3>
-            <p>Vertical axis from the starting city.</p>
-            <span class="mode-play">Play today's →</span>
+            <h3>Sever–Jih</h3>
+            <p>Svislá osa od výchozího města.</p>
+            <span class="mode-play">Hrát dnešní →</span>
           </button>
         </div>
       </section>
 
       <section class="mode-section mode-section-practice">
-        <h2 class="mode-section-title">Practice</h2>
+        <h2 class="mode-section-title">Procvičování</h2>
         <div class="mode-actions mode-actions-practice">
           <button type="button" class="mode-card mode-card-practice" data-practice-ew>
-            <h3>West–East</h3>
-            <p>Random sets</p>
+            <h3>Západ–Východ</h3>
+            <p>Náhodné sady</p>
           </button>
           <button type="button" class="mode-card mode-card-practice" data-practice-ns>
-            <h3>North–South</h3>
-            <p>Random sets</p>
+            <h3>Sever–Jih</h3>
+            <p>Náhodné sady</p>
           </button>
         </div>
       </section>
@@ -138,16 +138,16 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
     <div class="game-shell smery-shell">
       <header class="game-header">
         <div class="game-header-left">
-          <a class="modes-btn" href="/smery/">← Modes</a>
-          <h1 class="game-title">Directions · ${labels.title}</h1>
+          <a class="modes-btn" href="/smery/">← Režimy</a>
+          <h1 class="game-title">Směry · ${labels.title}</h1>
         </div>
         <div class="progress-label" data-progress>0/${CITIES_PER_ROUND}</div>
       </header>
 
       <section class="hud smery-hud">
-        <p class="city-prompt">Starting city</p>
+        <p class="city-prompt">Výchozí město</p>
         <h2 class="city-name" data-anchor>—</h2>
-        <p class="hint" data-hint>Grab a card and drag it between cities on the axis.</p>
+        <p class="hint" data-hint>Chyť kartu a přetáhni ji mezi města na ose.</p>
         <div class="feedback" data-feedback hidden></div>
       </section>
 
@@ -158,7 +158,7 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
 
         <aside class="smery-panel">
           <div class="pool-block">
-            <p class="pool-label">City cards</p>
+            <p class="pool-label">Karty měst</p>
             <div class="city-pool" data-pool></div>
           </div>
 
@@ -173,21 +173,21 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
       </div>
 
       <footer class="game-footer">
-        <div class="running-score" data-score>Score: <strong>0/0</strong></div>
-        <button type="button" class="btn" data-next disabled>Next</button>
+        <div class="running-score" data-score>Skóre: <strong>0/0</strong></div>
+        <button type="button" class="btn" data-next disabled>Další</button>
       </footer>
     </div>
 
     <div class="overlay" data-overlay hidden>
       <div class="result-panel" role="dialog" aria-labelledby="smery-result-title">
-        <h2 id="smery-result-title">Daily result</h2>
+        <h2 id="smery-result-title">Denní výsledek</h2>
         <p class="result-score" data-total></p>
         <ul class="result-list" data-list></ul>
         <p class="stats" data-stats></p>
         <div class="result-actions">
-          <button type="button" class="btn" data-share>Share</button>
-          <a class="btn btn-secondary" href="${practiceHref}">Practice</a>
-          <button type="button" class="btn btn-secondary" data-close>Close</button>
+          <button type="button" class="btn" data-share>Sdílet</button>
+          <a class="btn btn-secondary" href="${practiceHref}">Procvičování</a>
+          <button type="button" class="btn btn-secondary" data-close>Zavřít</button>
         </div>
         <p class="share-toast" data-toast aria-live="polite"></p>
       </div>
@@ -225,9 +225,9 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
   shareBtn.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(shareText)
-      toastEl.textContent = 'Copied to clipboard.'
+      toastEl.textContent = 'Zkopírováno do schránky.'
     } catch {
-      toastEl.textContent = 'Copy failed — try it manually.'
+      toastEl.textContent = 'Kopírování se nepovedlo — zkus to ručně.'
     }
   })
 
@@ -356,7 +356,7 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
       selectedName = name
       source.classList.add('holding')
       boardEl.classList.add('awaiting-drop')
-      hintEl.textContent = `Selected: ${name}. Tap between cities on the axis.`
+      hintEl.textContent = `Vybráno: ${name}. Klepni mezi města na ose.`
     }
   }
 
@@ -372,7 +372,7 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
         c.classList.remove('holding')
       })
       boardEl.classList.remove('awaiting-drop')
-      hintEl.textContent = 'Drop the card between cities on the axis.'
+      hintEl.textContent = 'Pusť kartu mezi města na ose.'
     }
 
     drag.ghost.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`
@@ -447,7 +447,7 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
 
   const renderPool = (cities: City[]): void => {
     if (cities.length === 0) {
-      poolEl.innerHTML = `<p class="pool-empty">All cards have been placed.</p>`
+      poolEl.innerHTML = `<p class="pool-empty">Všechny karty jsou umístěné.</p>`
       return
     }
 
@@ -479,18 +479,18 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
       // Top = North (pos, farthest → closest), then anchor, then South (neg, closest → farthest)
       for (let visual = 0; visual <= rays.pos.length; visual++) {
         const insertIndex = rays.pos.length - visual
-        parts.push(slot('pos', insertIndex, 'Insert north'))
+        parts.push(slot('pos', insertIndex, 'Vložit na sever'))
         if (visual < rays.pos.length) {
           parts.push(placed(rays.pos[rays.pos.length - 1 - visual]))
         }
       }
 
       parts.push(
-        `<div class="anchor-card" title="Starting city"><span class="placed-card-name">${anchor.name}</span><span class="axis-offset">start</span></div>`,
+        `<div class="anchor-card" title="Výchozí město"><span class="placed-card-name">${anchor.name}</span><span class="axis-offset">výchozí</span></div>`,
       )
 
       for (let i = 0; i <= rays.neg.length; i++) {
-        parts.push(slot('neg', i, 'Insert south'))
+        parts.push(slot('neg', i, 'Vložit na jih'))
         if (i < rays.neg.length) {
           parts.push(placed(rays.neg[i]))
         }
@@ -499,18 +499,18 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
       // Left = West (neg, farthest → closest), anchor, East (pos, closest → farthest)
       for (let visual = 0; visual <= rays.neg.length; visual++) {
         const insertIndex = rays.neg.length - visual
-        parts.push(slot('neg', insertIndex, 'Insert west'))
+        parts.push(slot('neg', insertIndex, 'Vložit na západ'))
         if (visual < rays.neg.length) {
           parts.push(placed(rays.neg[rays.neg.length - 1 - visual]))
         }
       }
 
       parts.push(
-        `<div class="anchor-card" title="Starting city"><span class="placed-card-name">${anchor.name}</span><span class="axis-offset">start</span></div>`,
+        `<div class="anchor-card" title="Výchozí město"><span class="placed-card-name">${anchor.name}</span><span class="axis-offset">výchozí</span></div>`,
       )
 
       for (let i = 0; i <= rays.pos.length; i++) {
-        parts.push(slot('pos', i, 'Insert east'))
+        parts.push(slot('pos', i, 'Vložit na východ'))
         if (i < rays.pos.length) {
           parts.push(placed(rays.pos[i]))
         }
@@ -548,7 +548,7 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
 
     showFeedback(ok, detail) {
       feedbackEl.hidden = false
-      feedbackEl.innerHTML = `<p class="distance">${ok ? 'Correct' : 'Wrong'} — <strong>${detail}</strong></p>`
+      feedbackEl.innerHTML = `<p class="distance">${ok ? 'Správně' : 'Špatně'} — <strong>${detail}</strong></p>`
       feedbackEl.dataset.ok = ok ? '1' : '0'
     },
 
@@ -559,7 +559,7 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
     },
 
     setScore(correct, total) {
-      scoreEl.innerHTML = `Score: <strong>${correct}/${total}</strong>`
+      scoreEl.innerHTML = `Skóre: <strong>${correct}/${total}</strong>`
     },
 
     setNextEnabled(enabled, label) {
@@ -585,7 +585,7 @@ export function mountSmeryUI(app: HTMLElement, axis: Axis): SmeryUI {
             `<li><span>${g.cityName}</span><span>${g.correct ? '✓' : '✗'} ${dirLabel(resultAxis, g.correctDir)}</span></li>`,
         )
         .join('')
-      statsEl.textContent = `${formatCzechDate(dateKey)} · ${AXIS_LABEL[resultAxis].title} · start: ${anchorName}`
+      statsEl.textContent = `${formatCzechDate(dateKey)} · ${AXIS_LABEL[resultAxis].title} · výchozí: ${anchorName}`
       overlay.hidden = false
     },
   }
@@ -599,5 +599,5 @@ export function buildSmeryShare(
   guesses: SmeryGuess[],
 ): string {
   const marks = guesses.map((g) => (g.correct ? '🟩' : '⬛')).join('')
-  return `Directions ${AXIS_LABEL[axis].title} ${formatCzechDate(dateKey)}\n${score}/${total}\n${marks}`
+  return `Czechdle Směry ${AXIS_LABEL[axis].title} ${formatCzechDate(dateKey)}\n${score}/${total}\n${marks}`
 }

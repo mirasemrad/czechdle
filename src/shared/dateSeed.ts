@@ -8,13 +8,7 @@ export function todayKey(date = new Date()): string {
 
 export function formatCzechDate(dateKey: string): string {
   const [y, m, d] = dateKey.split('-')
-  const date = new Date(Date.UTC(Number(y), Number(m) - 1, Number(d)))
-  return date.toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    timeZone: 'UTC',
-  })
+  return `${Number(d)}. ${Number(m)}. ${y}`
 }
 
 /** Simple deterministic PRNG (mulberry32). */

@@ -142,8 +142,8 @@ function playRound(
     paint()
     ui.setHint(
       opts.isDaily
-        ? "Today's challenge is done."
-        : 'Set complete — start another set.',
+        ? 'Dnešní výzva je hotová.'
+        : 'Sada hotová — spusť další.',
     )
 
     const share = buildSmeryShare(
@@ -155,7 +155,7 @@ function playRound(
     )
 
     if (opts.isDaily) {
-      ui.setNextEnabled(true, 'Result')
+      ui.setNextEnabled(true, 'Výsledek')
       ui.onNext(() => {
         ui.showResult({
           dateKey: opts.dateKey,
@@ -175,7 +175,7 @@ function playRound(
         shareText: share,
       })
     } else if (opts.onPlayAgain) {
-      ui.setNextEnabled(true, 'Next set')
+      ui.setNextEnabled(true, 'Další sada')
       ui.onNext(() => {
         map.destroy()
         opts.onPlayAgain?.()
@@ -237,7 +237,7 @@ function playRound(
     const place = `${dirLabel(axis, rightDir)}${rayLabel(rightIndex, rays[rightDir].length)}`
     const detail = ok
       ? `${place} · ${offset}${gap}`
-      : `correct: ${place} · ${offset}${gap}`
+      : `správně: ${place} · ${offset}${gap}`
     ui.showFeedback(ok, detail)
 
     if (remaining.length === 0) {
@@ -245,18 +245,18 @@ function playRound(
       return
     }
 
-    ui.setHint('Drag another card between cities on the axis.')
+    ui.setHint('Přetáhni další kartu mezi města na ose.')
     paint()
   }
 
   ui.setAnchor(round.anchor.name)
   ui.setScore(0, 0)
-  ui.setNextEnabled(false, 'Next')
+  ui.setNextEnabled(false, 'Další')
   ui.clearFeedback()
   ui.setHint(
     axis === 'ew'
-      ? 'Grab a card and drag it left/right, or between cities.'
-      : 'Grab a card and drag it up/down, or between cities.',
+      ? 'Chyť kartu a přetáhni ji doleva/doprava, nebo mezi města.'
+      : 'Chyť kartu a přetáhni ji nahoru/dolů, nebo mezi města.',
   )
   paint()
 
@@ -270,9 +270,9 @@ function playRound(
 
 function rayLabel(index: number, length: number): string {
   if (length <= 1) return ''
-  if (index === 0) return ' (closest)'
-  if (index === length - 1) return ' (farthest)'
-  return ` (#${index + 1} in line)`
+  if (index === 0) return ' (nejbližší)'
+  if (index === length - 1) return ' (nejvzdálenější)'
+  return ` (#${index + 1} v řadě)`
 }
 
 function showCompleted(
@@ -285,7 +285,7 @@ function showCompleted(
 ): void {
   ui.setAnchor(anchor.name)
   ui.setProgress(CITIES_PER_ROUND, CITIES_PER_ROUND)
-  ui.setHint("You've already finished today's challenge.")
+  ui.setHint("Dnešní výzvu už máš hotovou.")
   ui.render({
     remaining: [],
     anchor,
@@ -293,7 +293,7 @@ function showCompleted(
     interactive: false,
   })
   ui.setScore(result.score, result.guesses.length)
-  ui.setNextEnabled(true, 'Result')
+  ui.setNextEnabled(true, 'Výsledek')
   map.showAnchor(anchor)
 
   const share = buildSmeryShare(

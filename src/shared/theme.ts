@@ -32,7 +32,7 @@ export function initTheme(): void {
 }
 
 function labelFor(theme: Theme): string {
-  return theme === 'dark' ? 'Light mode' : 'Dark mode'
+  return theme === 'dark' ? 'Světlý režim' : 'Tmavý režim'
 }
 
 function syncToggleLabels(): void {
