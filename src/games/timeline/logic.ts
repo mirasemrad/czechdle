@@ -1,8 +1,36 @@
 import {
   compareEvents,
+  eventSortKey,
   formatEventYear,
   type HistoryEvent,
 } from '../../shared/events'
+
+/**
+ * Pixel widths for gaps (before / between / after).
+ * Year jumps change width, but edges stay small and extremes are blended
+ * so the board stays readable on one screen + light scroll.
+ */
+export function gapWidthsPx(line: HistoryEvent[]): number[] {
+  if (line.length === 0) return [44]
+  if (line.length === 1) return [56, 56]
+
+  const keys = line.map(eventSortKey)
+  const betweenRaw: number[] = []
+  for (let i = 1; i < keys.length; i++) {
+    const delta = Math.max(keys[i]! - keys[i - 1]!, 1)
+    betweenRaw.push(Math.sqrt(delta))
+  }
+
+  const sum = betweenRaw.reduce((a, b) => a + b, 0) || 1
+  const equal = sum / betweenRaw.length
+  const blended = betweenRaw.map((w) => 0.4 * equal + 0.6 * w)
+  const total = blended.reduce((a, b) => a + b, 0)
+  const minPx = 52
+  const budget = 300
+  const mids = blended.map((w) => minPx + Math.round((w / total) * budget))
+  const edge = 48
+  return [edge, ...mids, edge]
+}
 
 /** Index where `card` belongs among already placed events (0..line.length). */
 export function correctInsertIndex(

@@ -1,6 +1,7 @@
 import { formatCzechDate } from '../../shared/dateSeed'
 import { formatEventYear, type HistoryEvent } from '../../shared/events'
 import { HAND_PER_ROUND } from './daily'
+import { gapWidthsPx } from './logic'
 import type { TimelineGuess } from './storage'
 
 export type TimelineUI = {
@@ -101,26 +102,24 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
         <div class="progress-label" data-progress>0/${HAND_PER_ROUND}</div>
       </header>
 
-      <section class="hud">
-        <p class="city-prompt">Časová osa</p>
+      <section class="hud timeline-hud">
         <p class="hint" data-hint>Na ose je 5 událostí. Vlož mezi ně svých 5 karet.</p>
         <div class="feedback" data-feedback hidden></div>
       </section>
 
-      <div class="timeline-main">
-        <div class="pool-block">
-          <p class="pool-label">Karty událostí</p>
-          <div class="city-pool" data-pool></div>
+      <section class="timeline-stage">
+        <div class="timeline-stage-head">
+          <span>Dříve</span>
+          <span class="timeline-scroll-hint">← posuň →</span>
+          <span>Později</span>
         </div>
+        <div class="timeline-board" data-board></div>
+      </section>
 
-        <div class="axis-block timeline-axis">
-          <div class="axis-labels">
-            <span>Dříve</span>
-            <span>Později</span>
-          </div>
-          <div class="axis-track axis-track-ew timeline-track" data-board></div>
-        </div>
-      </div>
+      <section class="timeline-hand">
+        <p class="pool-label">Tvoje karty</p>
+        <div class="city-pool timeline-pool" data-pool></div>
+      </section>
 
       <footer class="game-footer">
         <div class="running-score" data-score>Skóre: <strong>0/0</strong></div>
@@ -167,6 +166,16 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
   let selectedId: string | null = null
 
   nextBtn.addEventListener('click', () => nextCb?.())
+  boardEl.addEventListener(
+    'wheel',
+    (e) => {
+      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return
+      if (boardEl.scrollWidth <= boardEl.clientWidth + 1) return
+      e.preventDefault()
+      boardEl.scrollLeft += e.deltaY
+    },
+    { passive: false },
+  )
   closeBtn.addEventListener('click', () => {
     overlay.hidden = true
   })
@@ -190,11 +199,6 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
     clearSlotHighlight()
     if (!slot) return
     slot.classList.add('over')
-    if (!slot.querySelector('.slot-preview')) {
-      const preview = document.createElement('span')
-      preview.className = 'slot-preview'
-      slot.appendChild(preview)
-    }
   }
 
   const slotAtPoint = (x: number, y: number): HTMLElement | null => {
@@ -203,18 +207,19 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
     ]
     if (slots.length === 0) return null
 
-    // Prefer direct hit, else nearest by midpoints along the row
     const hit = document.elementFromPoint(x, y)
     const direct = hit?.closest?.('.drop-slot') as HTMLElement | null
     if (direct && boardEl.contains(direct)) return direct
+
+    const boardR = boardEl.getBoundingClientRect()
+    if (y < boardR.top - 48 || y > boardR.bottom + 48) return null
 
     let best: HTMLElement | null = null
     let bestDist = Infinity
     for (const slot of slots) {
       const r = slot.getBoundingClientRect()
       const cx = r.left + r.width / 2
-      const cy = r.top + r.height / 2
-      const d = (x - cx) ** 2 + (y - cy) ** 2
+      const d = Math.abs(x - cx)
       if (d < bestDist) {
         bestDist = d
         best = slot
@@ -271,6 +276,7 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
     }
     drag.ghost.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`
     if (!drag.moved) return
+    maybeAutoScroll(e.clientX)
     const slot = slotAtPoint(e.clientX, e.clientY)
     drag.activeSlot = slot
     highlightSlot(slot)
@@ -349,24 +355,51 @@ export function mountTimelineUI(app: HTMLElement): TimelineUI {
     })
   }
 
+  const maybeAutoScroll = (clientX: number): void => {
+    const rect = boardEl.getBoundingClientRect()
+    const edge = 56
+    if (clientX < rect.left + edge) {
+      boardEl.scrollLeft -= 18
+    } else if (clientX > rect.right - edge) {
+      boardEl.scrollLeft += 18
+    }
+  }
+
   const renderBoard = (line: HistoryEvent[], fixedIds: Set<string>): void => {
-    const parts: string[] = []
-    const slot = (index: number) =>
-      interactive
-        ? `<button type="button" class="drop-slot" data-index="${index}" aria-label="Vložit sem"></button>`
-        : ''
+    const widths = gapWidthsPx(line)
+    const parts: string[] = [
+      '<div class="timeline-spine" aria-hidden="true"></div>',
+      '<div class="timeline-rail">',
+    ]
 
     for (let i = 0; i <= line.length; i++) {
-      parts.push(slot(i))
-      if (i < line.length) {
-        const ev = line[i]
-        const isFixed = fixedIds.has(ev.id)
+      const px = widths[i] ?? 48
+      if (interactive) {
         parts.push(
-          `<div class="placed-card timeline-placed${isFixed ? ' timeline-fixed' : ''}"><span class="placed-card-name">${ev.title}</span><span class="axis-offset">${formatEventYear(ev)}</span></div>`,
+          `<button type="button" class="drop-slot timeline-gap" data-index="${i}" style="flex:0 0 ${px}px;width:${px}px" aria-label="Vložit sem"></button>`,
         )
+      } else {
+        parts.push(
+          `<div class="timeline-gap timeline-gap-static" style="flex:0 0 ${px}px;width:${px}px" aria-hidden="true"></div>`,
+        )
+      }
+
+      if (i < line.length) {
+        const ev = line[i]!
+        const isFixed = fixedIds.has(ev.id)
+        parts.push(`
+          <div class="timeline-node${isFixed ? ' is-fixed' : ' is-played'}">
+            <div class="timeline-ticket">
+              <span class="timeline-ticket-year">${formatEventYear(ev)}</span>
+              <span class="timeline-ticket-title">${ev.title}</span>
+            </div>
+            <span class="timeline-pin" aria-hidden="true"></span>
+          </div>
+        `)
       }
     }
 
+    parts.push('</div>')
     boardEl.innerHTML = parts.join('')
     boardEl.classList.toggle(
       'awaiting-drop',
