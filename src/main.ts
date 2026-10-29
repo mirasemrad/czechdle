@@ -1,6 +1,8 @@
 import './styles.css'
+import { initAnalytics } from './shared/analytics'
 import { initTheme, mountThemeToggle } from './shared/theme'
 
+initAnalytics()
 initTheme()
 mountThemeToggle()
 
