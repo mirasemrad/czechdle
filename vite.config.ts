@@ -5,6 +5,12 @@ import { defineConfig } from 'vite'
 const rootDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  server: {
+    watch: {
+      // Avoid EBUSY crashes from locked assets outside the app
+      ignored: ['**/Graphics_to_use/**'],
+    },
+  },
   build: {
     rollupOptions: {
       input: {

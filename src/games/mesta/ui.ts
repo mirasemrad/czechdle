@@ -42,7 +42,7 @@ export function mountModePicker(
   app.innerHTML = `
     <main class="mode-picker">
       <a class="back-link" href="/">← Domů</a>
-      <h1 class="mode-brand">Českoměsta</h1>
+      <h1 class="mode-brand">Slepá mapa</h1>
       <p class="mode-lead">Najdi město na slepé mapě. Jeden tip, vzdálenost v km.</p>
 
       <section class="mode-section">
@@ -51,7 +51,7 @@ export function mountModePicker(
         <div class="mode-actions">
           <button type="button" class="mode-card mode-card-daily mode-card-forest mode-card-wide" data-daily>
             <span class="mode-card-meta">
-              <span>Českoměsta</span>
+              <span>Slepá mapa</span>
               <span>dnes</span>
             </span>
             <h3>Uhodni polohu.</h3>
@@ -218,7 +218,7 @@ export function mountGameUI(
       <header class="game-header">
         <div class="game-header-left">
           <a class="modes-btn" href="${modesHref}">← Režimy</a>
-          <h1 class="game-title">Českoměsta</h1>
+          <h1 class="game-title">Slepá mapa</h1>
         </div>
         <div class="progress-label" data-progress>
           ${isPractice ? 'Procvičování' : 'Město 1/5'}
@@ -408,5 +408,5 @@ export function buildShareText(
   totalKm: number,
 ): string {
   const lines = guesses.map((g) => `${g.distanceKm} km`).join('\n')
-  return `Czechdle Českoměsta ${formatCzechDate(dateKey)}\n${lines}\nCelkem: ${totalKm} km`
+  return `Czechdle Slepá mapa ${formatCzechDate(dateKey)}\n${lines}\nCelkem: ${totalKm} km`
 }
