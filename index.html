@@ -51,8 +51,51 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@600&family=Outfit:wght@400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="/hub-scene.jpg" fetchpriority="high" />
+    <style>
+      html, body { background: #070d16; margin: 0; min-height: 100%; }
+      .hub-scene {
+        position: fixed; inset: 0; z-index: 0; pointer-events: none;
+        background: #070d16; overflow: hidden;
+      }
+      .hub-art {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; object-position: center; opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+      .hub-art.is-ready { opacity: 1; }
+      .hub-vignette {
+        position: absolute; inset: 0; z-index: 1;
+        background: linear-gradient(
+          180deg,
+          transparent 0%,
+          transparent 40%,
+          rgba(7, 13, 22, 0.24) 65%,
+          rgba(7, 13, 22, 0.68) 100%
+        );
+      }
+      #app { position: relative; z-index: 1; min-height: 100%; opacity: 0; }
+      #app.is-ready { animation: app-in 0.3s ease both; }
+      @keyframes app-in {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: none; }
+      }
+    </style>
   </head>
   <body class="landing landing-pixel">
+    <div class="hub-scene" aria-hidden="true">
+      <img
+        class="hub-art"
+        src="/hub-scene.jpg"
+        width="1600"
+        height="893"
+        alt=""
+        decoding="async"
+        fetchpriority="high"
+        onload="this.classList.add('is-ready')"
+      />
+      <div class="hub-vignette"></div>
+    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -366,23 +366,11 @@ body.landing-pixel .hub-pixel {
   margin: 0;
   padding: 0;
   display: block;
-  animation: hub-pixel-in 0.55s steps(8) both;
   overflow: visible;
 }
 
-@keyframes hub-pixel-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 body.landing-pixel .hub-scene {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
@@ -412,6 +400,12 @@ body.landing-pixel .hub-vignette {
     rgba(7, 13, 22, 0.24) 65%,
     rgba(7, 13, 22, 0.68) 100%
   );
+}
+
+body.landing-pixel .hub {
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }
 
 body.landing-pixel .hub-content {
@@ -2408,33 +2402,18 @@ body.pixel-theme .back-link {
   background: rgba(22, 28, 38, 0.85);
 }
 
-/* —— Scene backgrounds used in play + mode screens —— */
+/* —— Scene backgrounds (image is early <img.scene-bg> in HTML) —— */
 body.pixel-theme.game-mesta,
 body.pixel-theme.game-smery,
 body.pixel-theme.game-timeline {
   background-color: #070d14;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-image: none;
 }
 
-body.pixel-theme.game-mesta {
-  background-image:
-    linear-gradient(rgba(7, 13, 22, 0.28), rgba(7, 13, 22, 0.38)),
-    url('/mesta-bg.jpg');
-}
-
-body.pixel-theme.game-smery {
-  background-image:
-    linear-gradient(rgba(7, 13, 22, 0.28), rgba(7, 13, 22, 0.4)),
-    url('/smery-bg.jpg');
-}
-
-body.pixel-theme.game-timeline {
-  background-image:
-    linear-gradient(rgba(7, 13, 22, 0.3), rgba(7, 13, 22, 0.42)),
-    url('/timeline-bg.jpg');
+body.pixel-theme.game-mesta .scene-bg,
+body.pixel-theme.game-smery .scene-bg,
+body.pixel-theme.game-timeline .scene-bg {
+  filter: brightness(0.78) contrast(1.02);
 }
 
 body.pixel-theme.game-mesta .mode-picker,

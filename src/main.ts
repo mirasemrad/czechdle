@@ -1,5 +1,6 @@
 import './styles.css'
 import { initAnalytics } from './shared/analytics'
+import { revealApp } from './shared/reveal'
 import { initTheme, mountThemeToggle } from './shared/theme'
 
 initAnalytics()
@@ -19,11 +20,6 @@ const czFlag = `
 
 app.innerHTML = `
   <main class="hub hub-pixel">
-    <div class="hub-scene" aria-hidden="true">
-      <img class="hub-art" src="/hub-scene.jpg?v=7" width="1376" height="768" alt="" />
-      <div class="hub-vignette"></div>
-    </div>
-
     <div class="hub-content">
       <header class="hub-header">
         <p class="hub-kicker">
@@ -127,3 +123,5 @@ app.innerHTML = `
     </div>
   </main>
 `
+
+revealApp(app)
