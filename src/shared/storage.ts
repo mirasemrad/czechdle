@@ -56,6 +56,82 @@ export function loadStats(): Stats {
   }
 }
 
+/** All saved daily results, newest first. */
+export function loadAllDailyResults(): DailyResult[] {
+  const results: DailyResult[] = []
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i)
+      if (!key || !key.startsWith(RESULT_PREFIX)) continue
+      const raw = localStorage.getItem(key)
+      if (!raw) continue
+      try {
+        const parsed = JSON.parse(raw) as DailyResult
+        if (
+          typeof parsed.dateKey === 'string' &&
+          typeof parsed.totalKm === 'number' &&
+          Number.isFinite(parsed.totalKm)
+        ) {
+          results.push(parsed)
+        }
+      } catch {
+        /* skip corrupt entries */
+      }
+    }
+  } catch {
+    return []
+  }
+  results.sort((a, b) => (a.dateKey < b.dateKey ? 1 : a.dateKey > b.dateKey ? -1 : 0))
+  return results
+}
+
+export type Scoreboard = {
+  gamesPlayed: number
+  averageKm: number | null
+  bestKm: number | null
+  worstKm: number | null
+  best: DailyResult[]
+  worst: DailyResult[]
+  history: DailyResult[]
+}
+
+/** Personal scoreboard for Slepá mapa (lower km = better). */
+export function getScoreboard(opts?: {
+  bestCount?: number
+  worstCount?: number
+}): Scoreboard {
+  const bestCount = opts?.bestCount ?? 5
+  const worstCount = opts?.worstCount ?? 3
+  const history = loadAllDailyResults()
+  const gamesPlayed = history.length
+  if (gamesPlayed === 0) {
+    return {
+      gamesPlayed: 0,
+      averageKm: null,
+      bestKm: null,
+      worstKm: null,
+      best: [],
+      worst: [],
+      history: [],
+    }
+  }
+
+  const byScoreAsc = [...history].sort((a, b) => a.totalKm - b.totalKm)
+  const totalKm = history.reduce((sum, r) => sum + r.totalKm, 0)
+  const best = byScoreAsc.slice(0, bestCount)
+  const worst = [...byScoreAsc].reverse().slice(0, worstCount)
+
+  return {
+    gamesPlayed,
+    averageKm: Math.round(totalKm / gamesPlayed),
+    bestKm: byScoreAsc[0]?.totalKm ?? null,
+    worstKm: byScoreAsc[byScoreAsc.length - 1]?.totalKm ?? null,
+    best,
+    worst,
+    history,
+  }
+}
+
 function updateStats(totalKm: number): void {
   const stats = loadStats()
   stats.gamesPlayed += 1

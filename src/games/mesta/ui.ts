@@ -1,4 +1,10 @@
-import type { GuessResult, PracticeFilter, Stats } from '../../shared/storage'
+import type {
+  DailyResult,
+  GuessResult,
+  PracticeFilter,
+  Stats,
+} from '../../shared/storage'
+import { getScoreboard } from '../../shared/storage'
 import { formatCzechDate } from '../../shared/dateSeed'
 import {
   filterCitiesByPop,
@@ -33,6 +39,91 @@ export type GameUI = {
     shareText: string
   }) => void
   hideResult: () => void
+}
+
+function renderScoreRows(results: DailyResult[]): string {
+  if (results.length === 0) return ''
+  return results
+    .map(
+      (r, i) => `<tr>
+        <td class="scoreboard-rank">#${i + 1}</td>
+        <td>${formatCzechDate(r.dateKey)}</td>
+        <td class="scoreboard-km">${r.totalKm} km</td>
+      </tr>`,
+    )
+    .join('')
+}
+
+function renderScoreboardHtml(): string {
+  const board = getScoreboard({ bestCount: 5, worstCount: 3 })
+  if (board.gamesPlayed === 0) {
+    return `
+      <section class="mode-section scoreboard" data-scoreboard>
+        <h2 class="mode-section-title">Tvoje skóre</h2>
+        <p class="mode-section-lead">Zatím žádná dokončená denní výzva. Zahraj si první!</p>
+      </section>
+    `
+  }
+
+  const historyRows = board.history
+    .map(
+      (r) => `<tr>
+        <td>${formatCzechDate(r.dateKey)}</td>
+        <td class="scoreboard-km">${r.totalKm} km</td>
+      </tr>`,
+    )
+    .join('')
+
+  return `
+    <section class="mode-section scoreboard" data-scoreboard>
+      <h2 class="mode-section-title">Tvoje skóre</h2>
+      <p class="mode-section-lead">Jen denní výzvy · čím méně km, tím lépe.</p>
+
+      <div class="scoreboard-summary">
+        <div class="scoreboard-stat">
+          <span class="scoreboard-stat-label">Odehráno</span>
+          <span class="scoreboard-stat-value">${board.gamesPlayed}×</span>
+        </div>
+        <div class="scoreboard-stat">
+          <span class="scoreboard-stat-label">Průměr</span>
+          <span class="scoreboard-stat-value">${board.averageKm} km</span>
+        </div>
+        <div class="scoreboard-stat">
+          <span class="scoreboard-stat-label">Nejlepší</span>
+          <span class="scoreboard-stat-value">${board.bestKm} km</span>
+        </div>
+        <div class="scoreboard-stat">
+          <span class="scoreboard-stat-label">Nejhorší</span>
+          <span class="scoreboard-stat-value">${board.worstKm} km</span>
+        </div>
+      </div>
+
+      <div class="scoreboard-grid">
+        <div class="scoreboard-block">
+          <h3 class="scoreboard-heading">Top 5 nejlepších</h3>
+          <table class="scoreboard-table">
+            <thead><tr><th></th><th>Datum</th><th>Skóre</th></tr></thead>
+            <tbody>${renderScoreRows(board.best)}</tbody>
+          </table>
+        </div>
+        <div class="scoreboard-block">
+          <h3 class="scoreboard-heading">3 nejhorší</h3>
+          <table class="scoreboard-table">
+            <thead><tr><th></th><th>Datum</th><th>Skóre</th></tr></thead>
+            <tbody>${renderScoreRows(board.worst)}</tbody>
+          </table>
+        </div>
+      </div>
+
+      <details class="scoreboard-history">
+        <summary>Celá historie (${board.gamesPlayed})</summary>
+        <table class="scoreboard-table scoreboard-table-history">
+          <thead><tr><th>Datum</th><th>Skóre</th></tr></thead>
+          <tbody>${historyRows}</tbody>
+        </table>
+      </details>
+    </section>
+  `
 }
 
 export function mountModePicker(
@@ -70,6 +161,8 @@ export function mountModePicker(
           </button>
         </div>
       </section>
+
+      ${renderScoreboardHtml()}
     </main>
   `
 
@@ -262,6 +355,7 @@ export function mountGameUI(
         <p class="stats" data-stats></p>
         <div class="result-actions">
           <button type="button" class="btn" data-share>Sdílet</button>
+          <a class="btn btn-secondary" href="/mesta/">Tvoje skóre</a>
           <a class="btn btn-secondary" href="/mesta/?mode=practice">Procvičování</a>
           <button type="button" class="btn btn-secondary" data-close>Zavřít</button>
         </div>
@@ -384,14 +478,13 @@ export function mountGameUI(
         )
         .join('')
 
-      const avg =
-        stats.gamesPlayed > 0
-          ? Math.round(stats.totalKmAllTime / stats.gamesPlayed)
-          : totalKm
-      const best = stats.bestScore ?? totalKm
+      const board = getScoreboard()
+      const avg = board.averageKm ?? totalKm
+      const best = board.bestKm ?? stats.bestScore ?? totalKm
+      const played = board.gamesPlayed || stats.gamesPlayed
       statsEl.innerHTML = `
-        ${formatCzechDate(dateKey)} · odehráno ${stats.gamesPlayed}×<br />
-        Nejlepší skóre: ${best} km · průměr: ${avg} km
+        ${formatCzechDate(dateKey)} · odehráno ${played}×<br />
+        Nejlepší: ${best} km · průměr: ${avg} km
       `
       overlay.hidden = false
     },

@@ -336,6 +336,7 @@ body.landing-pixel {
   color: var(--px-ink);
   image-rendering: pixelated;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body.landing-pixel,
@@ -366,7 +367,7 @@ body.landing-pixel .hub-pixel {
   padding: 0;
   display: block;
   animation: hub-pixel-in 0.55s steps(8) both;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @keyframes hub-pixel-in {
@@ -662,7 +663,7 @@ body.landing-pixel .game-tile:hover .game-tile-cta {
 .mode-picker {
   max-width: 40rem;
   margin: 0 auto;
-  padding: 2.75rem 1.35rem 3.5rem;
+  padding: 2.75rem 1.35rem 4.5rem;
   animation: hub-in 0.4s ease both;
 }
 
@@ -1016,7 +1017,16 @@ body.landing-pixel .game-tile:hover .game-tile-cta {
 
 /* â€”â€” Game page â€”â€” */
 .game-page {
+  /* Mode pickers / scoreboards must scroll; lock only while a game is open */
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+.game-page:has(.game-shell) {
   overflow: hidden;
+  height: 100%;
+  max-height: 100dvh;
 }
 
 .game-shell {
@@ -1026,6 +1036,7 @@ body.landing-pixel .game-tile:hover .game-tile-cta {
   height: 100dvh;
   background: var(--bg);
   color: var(--ink);
+  overflow: hidden;
 }
 
 .game-header {
@@ -2573,4 +2584,155 @@ body.pixel-theme.game-timeline .timeline-hand {
     padding-left: 0.55rem;
     padding-right: 0.55rem;
   }
+}
+
+/* —— Slepá mapa scoreboard —— */
+.scoreboard {
+  margin-top: 1.75rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 3px solid var(--px-stone-dark, #2a3340);
+  background: rgba(18, 24, 34, 0.88);
+  box-shadow: 4px 4px 0 #000;
+}
+
+.scoreboard-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.55rem;
+  margin: 0 0 1.1rem;
+}
+
+@media (max-width: 560px) {
+  .scoreboard-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.scoreboard-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.65rem 0.7rem;
+  border: 2px solid var(--px-stone-dark, #2a3340);
+  background: rgba(8, 12, 18, 0.55);
+}
+
+.scoreboard-stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+}
+
+.scoreboard-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--px-accent, #ffd76a);
+  text-shadow: 1px 1px 0 #000;
+}
+
+.scoreboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .scoreboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scoreboard-block {
+  min-width: 0;
+}
+
+.scoreboard-heading {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.scoreboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.scoreboard-table th,
+.scoreboard-table td {
+  padding: 0.4rem 0.45rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(212, 196, 168, 0.16);
+}
+
+.scoreboard-table th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+.scoreboard-rank {
+  width: 2.2rem;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+.scoreboard-km {
+  font-weight: 700;
+  color: var(--px-accent, #ffd76a);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.scoreboard-table th:last-child,
+.scoreboard-table td.scoreboard-km {
+  text-align: right;
+}
+
+.scoreboard-history {
+  margin-top: 0.35rem;
+  border-top: 2px solid rgba(212, 196, 168, 0.16);
+  padding-top: 0.65rem;
+}
+
+.scoreboard-history summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent-strong);
+  list-style: none;
+}
+
+.scoreboard-history summary::-webkit-details-marker {
+  display: none;
+}
+
+.scoreboard-history summary::before {
+  content: '? ';
+  color: var(--px-accent, #ffd76a);
+}
+
+.scoreboard-history[open] summary::before {
+  content: '? ';
+}
+
+.scoreboard-table-history {
+  margin-top: 0.55rem;
+  max-height: 14rem;
+  display: block;
+  overflow: auto;
+}
+
+.scoreboard-table-history thead,
+.scoreboard-table-history tbody,
+.scoreboard-table-history tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
