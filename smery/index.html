@@ -42,6 +42,7 @@
     />
     <link rel="preload" as="image" href="/smery-bg.jpg" fetchpriority="high" />
     <style>
+      html { scrollbar-gutter: stable; }
       html, body { background: #070d14; margin: 0; min-height: 100%; }
       .scene-bg {
         position: fixed; inset: 0; width: 100%; height: 100%;
@@ -52,8 +53,8 @@
       #app { position: relative; z-index: 1; min-height: 100%; opacity: 0; }
       #app.is-ready { animation: app-in 0.28s ease both; }
       @keyframes app-in {
-        from { opacity: 0; transform: translateY(6px); }
-        to { opacity: 1; transform: none; }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
     </style>
   </head>

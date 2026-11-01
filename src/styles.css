@@ -92,6 +92,11 @@ html[data-theme='light'] {
   box-sizing: border-box;
 }
 
+html {
+  /* Keep layout width stable when the scrollbar appears/disappears */
+  scrollbar-gutter: stable;
+}
+
 html,
 body {
   margin: 0;
@@ -337,6 +342,7 @@ body.landing-pixel {
   image-rendering: pixelated;
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 
 body.landing-pixel,
@@ -1014,6 +1020,7 @@ body.landing-pixel .game-tile:hover .game-tile-cta {
   /* Mode pickers / scoreboards must scroll; lock only while a game is open */
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-gutter: stable;
   min-height: 100%;
 }
 

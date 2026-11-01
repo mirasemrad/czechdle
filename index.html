@@ -53,6 +53,7 @@
     />
     <link rel="preload" as="image" href="/hub-scene.jpg" fetchpriority="high" />
     <style>
+      html { scrollbar-gutter: stable; }
       html, body { background: #070d16; margin: 0; min-height: 100%; }
       .hub-scene {
         position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -77,8 +78,8 @@
       #app { position: relative; z-index: 1; min-height: 100%; opacity: 0; }
       #app.is-ready { animation: app-in 0.3s ease both; }
       @keyframes app-in {
-        from { opacity: 0; transform: translateY(8px); }
-        to { opacity: 1; transform: none; }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
     </style>
   </head>
